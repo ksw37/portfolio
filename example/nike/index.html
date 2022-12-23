@@ -7,6 +7,15 @@
     <title>nike</title>
     <!-- 외부스타일시트 -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+
+    <!-- 폰트어썸 -->
+    <script src="https://use.fontawesome.com/29f84cf8f7.js"></script> 
+
+
+
 
     <!-- 학습내용
         1.배경에 동영상 깔기
@@ -20,7 +29,7 @@
 </head>
 <body>
     <!-- 트랜스폼 학습 -->
-
+<!-- 
     <div id="scale">
         <div class="box01">
             <p>scale(1.2) <br> x축 y축 비율</p>
@@ -203,7 +212,76 @@
                                         opacity: 0.5;}
 
 
-    </style>
+    </style> -->
+
+
+    <div class="vid">
+        <video autoplay loop muted>  <!-- 오토플레이시 뮤트(음소거) 값 지정 안하면 플레이 안되는 웹이 있음 -->
+            <source src="img/nike.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h1 class="logo">
+        <img src="img/logo2.png" alt="nike로고"> <!-- 알트값 안쓰면 나중에 검사할때 경고뜸 -->
+    </h1>
+    <header>
+        <nav>
+            <ul id="gnb">
+                <li><a href="#"><em>About NIKE</em></a>
+                    <ul>
+                        <li><a href=""><em>English</em></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><em>Brand Info</em></a>
+                <ul>
+                    <li><a href="#"><em>sub</em></a></li>
+                    <li><a href="#"><em>sub</em></a></li>
+                    <li><a href="#"><em>sub</em></a></li>
+                </ul></li>
+                <li><a href="#"><em>Community</em></a></li>
+                <li><a href="#"><em>Product Value</em></a></li>
+                <li><a href="#"><em>Company History</em></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+    <section class="txtBox">
+        <p class="txt">Best Qualified<b>AIR MAX</b> </p>
+        <p class="big">50<em>/24</em> </p>
+
+    </section>
+    <section class="side">
+            <div>
+                <p>
+                    <em>Event & Community</em>
+                    <img src="img/pic1.png" alt="">
+                </p>
+                <p>
+                    <em>News & Notice</em>
+                    <img src="img/pic2.png" alt="">
+                </p>
+                <p>
+                    <em>Produck Review</em>
+                    <img src="img/pic3.png" alt="">
+                </p>
+            </div>
+
+            <article>
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            </article>
+
+
+    </section>
+
+
+
+    <!-- <script src="js/js.js"></script> -->
 
 </body>
 </html>

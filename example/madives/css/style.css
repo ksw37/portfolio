@@ -1,0 +1,1036 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Poiret One', cursive;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+body {
+    font-family: 'Poiret One', cursive;
+}
+
+/* 레이아웃 설정 */
+header {
+    /* 섹션은 스크롤 되지만 헤더는 고정되어있음(fixed)
+섹션의 높이는 섹션이 아닌article에서 해줘야함 = 임의로 어디까지 내려갈지 모르니까 */
+    width: 15%;
+    position: fixed;
+    height: 100%;
+    /* heigt는 고정이니까 100%할수있음 */
+    background-color: #fff;
+}
+nav {
+    width: 85%;
+    height: 35px;
+    background-color: #000;
+    margin-left: 15%;
+    /*헤더에 가려져 있기 때문에 옆으로 밀어야해서*/
+}
+section {
+    width: 85%;
+    height: auto;
+    background-color: bisque;
+    /*아티클 설정 없어서 얘만 하면 안보임=아티클 설정해야보임*/
+    margin-left: 15%;
+    /*헤더에 가려져 있기 때문에 옆으로 밀어야해서*/
+}
+article {
+    height: 260px;
+    float: left; 
+    width: 20%;
+
+}
+
+article:nth-child(1) {
+    background-color: #ddd;
+    width: 60%;
+    height: 520px;
+}
+article:nth-child(2) {
+    background-color: #ccc;
+    width: 40%;
+}
+article:nth-child(3) {
+    background-color: #bbb;
+}
+article:nth-child(4) {
+    background-color: #aaa;
+}
+article:nth-child(5) {
+    background-color: #999;
+}
+article:nth-child(6) {
+    background-color: #888;
+    width: 40%;
+}
+article:nth-child(7) {
+    background-color: #777;
+}
+article:nth-child(8) {
+    background-color: #666;
+}
+article:nth-child(9) {
+    background-color: #555;
+    width: 40%;
+}
+article:nth-child(10) {
+    background-color: #444;
+}
+article:nth-child(11) {
+    background-color: #333;
+}
+article:nth-child(12) {
+    background-color: #222;
+}
+
+
+
+
+/* header 콘텐츠 */
+header h1 {
+background-image: url(../img/logo1.png);
+background-repeat: no-repeat;
+background-size: contain;
+/* 백그라운드지정=로고가 움직일 일은 없겠지만 수정하면 움직일수 있으니까 지정해주는게 좋음 */
+text-indent: -9999px;
+width: 180px;
+height: 136px; /*이미지의 크기 확인해서 크기만큼 지정해줌*/
+position: absolute;
+left: 50%;
+margin-left: -90px;
+top: 70px;} /* 이미지를 가운데로 보내기 위해 앱솔루트 한다음 레프트 반으로 와주고 와이드값의 반 값을 마진으로 보내줌 */
+#gnb {
+position: absolute;
+top: 50%;
+margin-top: -100px;
+width: 100%;
+right: 0;
+
+}
+#gnb li {}
+#gnb a {
+display: block; /*패딩 넣기 위해 지정*/
+padding: 8px 30px;
+font-size: 22px;
+font-weight: bold;
+color: #555;
+line-height: 1.8;
+text-align: center;
+
+}
+
+.snsSet {
+position: absolute;
+bottom: 50px;
+width: 90px; /* 어바웃과 컨택트 이미지의 와이드 값 더해서 정렬해줄것임(a에게 float let) */
+right: 50%;/* 미디어쿼리구간에서 우측상단으로 올릴것이기 때문에 오른쪽 기준으로 설정 */
+margin-right: -45px;
+}
+.snsSet a {
+float: left;
+}
+.snsSet img {
+max-width: 100%;/*너 지금이 제일 큰거야 라고 적용(더이상 이미지가 커지지 않게)*/
+}
+
+
+
+
+/* nav 콘텐츠 설정 */
+
+nav a {
+position:absolute;
+top: 5px;
+position: relative;
+background-color: #212121;
+}
+nav img {max-width: 100%;
+}
+
+nav a:nth-child(1) {left: 10px;
+}
+nav a:nth-child(2) {left: 150px;
+}
+nav a:nth-child(3) {right: 96px;
+}
+nav a:nth-child(4) {right: 10px;
+}
+
+
+
+
+
+
+/* 배경이미지삽입 */
+.bg {
+cursor: pointer;
+width: 100%;
+height: 100%;
+background-size: cover;/*배경이미지의 크기를 꽉채워라(자동으로 리핏 안됌)*/
+background-position: center center;
+position: relative;
+overflow: hidden;/*나에게만 보여라(오버플로우히든하기전에는 전체 화면에서 커진게 보였는데 설정 적용후 아티클 안에서만보임*/
+}
+.bg span {
+font-size: 60px;
+position: absolute;
+right: 20px;
+bottom: 20px;
+color: #fff;
+opacity: 0;
+transform: scale(10);
+transition: all 0.5s;
+
+}
+
+article:nth-child(1) span {
+font-size: 170px;
+opacity: 1;
+transform: scale(1);
+bottom: -30px;
+}
+article:nth-child(1):hover span {
+opacity: 0.8;
+transform: scale(1.1);
+}
+article:nth-child(1) div {
+background-image: url(../img/pic1.jpg);
+}
+article:nth-child(4) div {
+background-image: url(../img/pic2.jpg);
+}
+article:nth-child(5) div {
+background-image: url(../img/pic3.jpg);
+}
+article:nth-child(7) div {
+background-image: url(../img/pic4.jpg);}
+article:nth-child(9) div {
+background-image: url(../img/pic5.jpg);
+}
+article:nth-child(10) div {
+background-image: url(../img/pic6.jpg);
+}
+article:nth-child(12) div {
+background-image: url(../img/pic7.jpg);
+}
+
+
+article:hover span {
+opacity: 1;
+transform: scale(1);/*스케일 = 커졌다가 작아지는것*/
+}
+
+
+
+
+
+/* 텍스트삽입 */
+.txt {
+cursor: pointer;
+width: 100%;
+height: 100%;
+padding: 40px 30px;
+box-sizing: border-box;
+color: #666;
+background-color: #fff;
+}
+
+article strong {
+display: block;
+font-size: 30px;
+}
+article em {
+font-size: 16px;
+margin-top: 10px;
+display: block;
+font-style: normal;
+}
+
+
+article:nth-child(3) div {
+background-color: #bff7fa;
+color: #fff;
+}
+article:nth-child(11) div {
+background-color: #e3f1fb;
+color: #fff;
+}
+
+
+
+
+
+/* 미디어쿼리구간설정 (기존은 1600px이상 구간이다) */
+
+/* 1280px이상 1599px이하 구간 -----------1번구간  */
+@media (min-width:1280px) and (max-width:1599px) {
+
+    header {
+        width: 100%;
+        position: relative;
+        /*헤더를 움직이지 않고 고정하려면 fixed하고 nav한테 마진 탑 값을 줘도됌 그러나 움직이길것이기때문에 렐러티브로*/
+        height: 80px;
+    }
+    nav {
+        width: 100%;
+        height: 35px;
+        margin-left: 0;
+    }
+    section {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+
+
+
+    /* header 콘텐츠 */
+    header h1 {
+    background-image: url(../img/logo2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* 백그라운드지정=로고가 움직일 일은 없겠지만 수정하면 움직일수 있으니까 지정해주는게 좋음 */
+    text-indent: -9999px;
+    width: 200px;
+    height: 40px; /*이미지의 크기 확인해서 크기만큼 지정해줌*/
+    position: absolute;
+    left: 20px;
+    margin-left: 00px;
+    top: 20px;} /* 이미지를 가운데로 보내기 위해 앱솔루트 한다음 레프트 반으로 와주고 와이드값의 반 값을 마진으로 보내줌 */
+    #gnb {
+    position: absolute;
+    top: 20%;
+    margin-top: -0px;
+    width: auto;
+    right: 200px;
+    
+    }
+    #gnb li {
+    float: left;
+    }
+    #gnb a {
+    display: block; /*패딩 넣기 위해 지정*/
+    padding: 8px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    
+    }
+    
+    
+    .snsSet {
+    position: absolute;
+    bottom: 20px;
+    width: 90px; /* 어바웃과 컨택트 이미지의 와이드 값 더해서 정렬해줄것임(a에게 float let) */
+    right: 10%;/* 미디어쿼리구간에서 우측상단으로 올릴것이기 때문에 오른쪽 기준으로 설정 */
+    margin-right: -45px;
+    }
+    .snsSet a {
+    float: left;
+    }
+    .snsSet img {
+    max-width: 100%;/*너 지금이 제일 큰거야 라고 적용(더이상 이미지가 커지지 않게)*/
+    }
+    
+    
+    
+    
+    
+
+
+
+
+
+}
+
+/* 1024px이상 1279px이하 구간 -----------2번구간 */
+@media (min-width:1024px) and (max-width:1279px) {
+
+    header {
+        width: 100%;
+        position: relative;
+        height: 80px;
+    }
+    nav {
+        width: 100%;
+        height: 35px;
+        margin-left: 0;
+    }
+    section {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    article {
+        height: 260px;
+        float: left;
+        width: 25%;
+    }
+
+    article:nth-child(1) {
+        background-color: #ddd;
+        width: 75%;
+        height: 520px;
+    }
+    article:nth-child(2) {
+        background-color: #ccc;
+        width: 25%;
+    }
+    article:nth-child(3) {
+        background-color: #bbb;
+    }
+    article:nth-child(4) {
+        background-color: #aaa;
+    }
+    article:nth-child(5) {
+        background-color: #999;
+    }
+    article:nth-child(6) {
+        background-color: #888;
+        width: 50%;
+    }
+    article:nth-child(7) {
+        background-color: #777;
+        width: 50%;
+    }
+    article:nth-child(8) {
+        background-color: #666;
+    }
+    article:nth-child(9) {
+        background-color: #555;
+        width: 25%;
+    }
+    article:nth-child(10) {
+        background-color: #444;
+        width: 50%;
+    }
+    article:nth-child(11) {
+        background-color: #333;
+    }
+    article:nth-child(12) {
+        background-color: #222;
+    }
+
+
+
+
+
+
+
+
+    /* header 콘텐츠 */
+    header h1 {
+        background-image: url(../img/logo2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* 백그라운드지정=로고가 움직일 일은 없겠지만 수정하면 움직일수 있으니까 지정해주는게 좋음 */
+        text-indent: -9999px;
+        width: 200px;
+        height: 40px; /*이미지의 크기 확인해서 크기만큼 지정해줌*/
+        position: absolute;
+        left: 10%;
+        margin-left: 00px;
+        top: 20px;} /* 이미지를 가운데로 보내기 위해 앱솔루트 한다음 레프트 반으로 와주고 와이드값의 반 값을 마진으로 보내줌 */
+        #gnb {
+        position: absolute;
+        top: 20%;
+        margin-top: -0px;
+        width: auto;
+        right: 200px;
+        
+        }
+        #gnb li {
+        float: left;
+        }
+        #gnb a {
+        display: block; /*패딩 넣기 위해 지정*/
+        padding: 8px 30px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #555;
+        line-height: 1.8;
+        text-align: center;
+        
+        }
+        
+        
+        .snsSet {
+        position: absolute;
+        bottom: 20px;
+        width: 90px; /* 어바웃과 컨택트 이미지의 와이드 값 더해서 정렬해줄것임(a에게 float let) */
+        right: 10%;/* 미디어쿼리구간에서 우측상단으로 올릴것이기 때문에 오른쪽 기준으로 설정 */
+        margin-right: -45px;
+        }
+        .snsSet a {
+        float: left;
+        }
+        .snsSet img {
+        max-width: 100%;/*너 지금이 제일 큰거야 라고 적용(더이상 이미지가 커지지 않게)*/
+        }
+        
+        
+        
+        
+        
+    
+    
+    
+    
+
+
+
+    
+}
+
+/* 780px이상 1023px이하 구간 -----------3번구간 */
+@media (min-width:780px) and (max-width:1023px) {
+
+    header {
+        width: 100%;
+        position: relative;
+        height: 80px;
+    }
+    nav {
+        width: 100%;
+        height: 35px;
+        margin-left: 0;
+    }
+    section {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    article {
+        height: 260px;
+        float: left;
+        width: 33.3333%;
+    }
+
+    article:nth-child(1) {
+        background-color: #ddd;
+        width: 100%;
+        height: 400px;
+    }
+    article:nth-child(2) {
+        background-color: #ccc;
+        width: 66.6666%;
+
+    }
+    article:nth-child(3) {
+        background-color: #bbb;
+
+    }
+    article:nth-child(4) {
+        background-color: #aaa;
+        display: none;
+    }
+    article:nth-child(5) {
+        background-color: #999;
+    }
+    article:nth-child(6) {
+        background-color: #888;
+        width: 66.6666%;
+    }
+    article:nth-child(7) {
+        background-color: #777;
+        width: 50%;
+        display: none;
+        /* display:none 하면 width값 상관없음 */
+    }
+    article:nth-child(8) {
+        background-color: #666;
+    }
+    article:nth-child(9) {
+        background-color: #555;
+        width: 33.3333%;
+    }
+    article:nth-child(10) {
+        background-color: #444;
+        width: 50%;
+        display: none;
+    }
+    article:nth-child(11) {
+        background-color: #333;
+    }
+    article:nth-child(12) {
+        background-color: #222;
+        display: none;
+    }
+
+
+
+
+
+
+    /* header 콘텐츠 */
+    header h1 {
+        background-image: url(../img/logo2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* 백그라운드지정=로고가 움직일 일은 없겠지만 수정하면 움직일수 있으니까 지정해주는게 좋음 */
+        text-indent: -9999px;
+        width: 200px;
+        height: 40px; /*이미지의 크기 확인해서 크기만큼 지정해줌*/
+        position: absolute;
+        left: 10%;
+        margin-left: 00px;
+        top: 20px;} /* 이미지를 가운데로 보내기 위해 앱솔루트 한다음 레프트 반으로 와주고 와이드값의 반 값을 마진으로 보내줌 */
+        #gnb {
+        position: absolute;
+        top: 20%;
+        margin-top: -0px;
+        width: auto;
+        right: 180px;
+                }
+        #gnb li {
+        float: left;
+        }
+        #gnb a {
+        display: block; /*패딩 넣기 위해 지정*/
+        padding: 8px 10px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #555;
+        line-height: 1.8;
+        text-align: center;
+        
+        }
+        
+        
+        .snsSet {
+        position: absolute;
+        bottom: 20px;
+        width: 90px; /* 어바웃과 컨택트 이미지의 와이드 값 더해서 정렬해줄것임(a에게 float let) */
+        right: 10%;/* 미디어쿼리구간에서 우측상단으로 올릴것이기 때문에 오른쪽 기준으로 설정 */
+        margin-right: -45px;
+        }
+        .snsSet a {
+        float: left;
+        }
+        .snsSet img {
+        max-width: 100%;/*너 지금이 제일 큰거야 라고 적용(더이상 이미지가 커지지 않게)*/
+        }
+        
+        
+        
+        
+        
+    
+    
+    
+
+
+}
+
+/* 640px이상 779px이하 구간 -----------4번구간 */
+@media (min-width:640px) and (max-width:779px) {
+
+    header {
+        width: 100%;
+        position: relative;
+        height: 80px;
+    }
+    nav {
+        width: 100%;
+        height: 35px;
+        margin-left: 0;
+    }
+    section {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    article {
+        height: 260px;
+        float: left;
+        width: 50%;
+    }
+
+    article:nth-child(1) {
+        background-color: #ddd;
+        width: 100%;
+        height: 400px;
+    }
+    article:nth-child(2) {
+        background-color: #ccc;
+        width: 100%;
+
+    }
+    article:nth-child(3) {
+        background-color: #bbb;
+        width: 50%;
+        display: none;
+    }
+    article:nth-child(4) {
+        background-color: #aaa;
+        display: none;
+    }
+    article:nth-child(5) {
+        background-color: #999;
+    }
+    article:nth-child(6) {
+        background-color: #888;
+        width: 50%;
+    }
+    article:nth-child(7) {
+        background-color: #777;
+        width: 50%;
+        display: none;
+    }
+    article:nth-child(8) {
+        background-color: #666;
+    }
+    article:nth-child(9) {
+        background-color: #555;
+        width: 50%;
+    }
+    article:nth-child(10) {
+        background-color: #444;
+        width: 50%;
+        display: none;
+    }
+    article:nth-child(11) {
+        background-color: #333;
+    }
+    article:nth-child(12) {
+        background-color: #222;
+    }
+
+
+
+
+
+
+    
+    /* header 콘텐츠 */
+    header h1 {
+        background-image: url(../img/logo2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* 백그라운드지정=로고가 움직일 일은 없겠지만 수정하면 움직일수 있으니까 지정해주는게 좋음 */
+        text-indent: -9999px;
+        width: 200px;
+        height: 40px; /*이미지의 크기 확인해서 크기만큼 지정해줌*/
+        position: absolute;
+        left: 20px;
+        margin-left: 00px;
+        top: 20px;} /* 이미지를 가운데로 보내기 위해 앱솔루트 한다음 레프트 반으로 와주고 와이드값의 반 값을 마진으로 보내줌 */
+        
+        #gnb {
+        position: absolute;
+        top: 20%;
+        margin-top: -0px;
+        width: auto;
+        right: 20px;
+        
+        }
+        #gnb li {
+        float: left;
+        }
+        #gnb a {
+        display: block; /*패딩 넣기 위해 지정*/
+        padding: 10px 10px;
+        font-size: 17px;
+        font-weight: bold;
+        color: #555;
+        line-height: 1.8;
+        text-align: center;
+        
+        }
+        
+        
+        .snsSet {
+        position: absolute;
+        bottom: 20px;
+        width: 90px; /* 어바웃과 컨택트 이미지의 와이드 값 더해서 정렬해줄것임(a에게 float let) */
+        right: 10%;/* 미디어쿼리구간에서 우측상단으로 올릴것이기 때문에 오른쪽 기준으로 설정 */
+        margin-right: -45px;
+        display: none;
+        }
+        .snsSet a {
+        float: left;
+        }
+        .snsSet img {
+        max-width: 100%;/*너 지금이 제일 큰거야 라고 적용(더이상 이미지가 커지지 않게)*/
+        }
+        
+        
+        
+        
+        
+    
+    
+    
+        
+}
+
+/* 480px이상 639px이하 구간 -----------5번구간 */
+@media (min-width:480px) and (max-width:639px) {
+
+    header {
+        width: 100%;
+        position: relative;
+        height: 130px;
+    }
+    nav {
+        width: 100%;
+        height: 35px;
+        margin-left: 0;
+        display: none;
+    }
+    section {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    article {
+        height: 150px;
+        float: left;
+        width: 50%;
+    }
+
+    article:nth-child(1) {
+        background-color: #ddd;
+        width: 100%;
+        height: 300px;
+    }
+    article:nth-child(2) {
+        background-color: #ccc;
+        width: 100%;
+
+    }
+    article:nth-child(3) {
+        background-color: #bbb;
+        width: 50%;
+        display: none;
+    }
+    article:nth-child(4) {
+        background-color: #aaa;
+        display: none;
+    }
+    article:nth-child(5) {
+        background-color: #999;
+    }
+    article:nth-child(6) {
+        background-color: #888;
+        width: 50%;
+    }
+    article:nth-child(7) {
+        background-color: #777;
+        width: 50%;
+        display: none;
+    }
+    article:nth-child(8) {
+        background-color: #666;
+    }
+    article:nth-child(9) {
+        background-color: #555;
+        width: 50%;
+    }
+    article:nth-child(10) {
+        background-color: #444;
+        width: 50%;
+        display: none;
+    }
+    article:nth-child(11) {
+        background-color: #333;
+    }
+    article:nth-child(12) {
+        background-color: #222;
+    }
+
+
+
+
+
+    /* header 콘텐츠 */
+    header h1 {
+        background-image: url(../img/logo2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* 백그라운드지정=로고가 움직일 일은 없겠지만 수정하면 움직일수 있으니까 지정해주는게 좋음 */
+        text-indent: -9999px;
+        width: 200px;
+        height: 40px; /*이미지의 크기 확인해서 크기만큼 지정해줌*/
+        position: relative;
+        left: 20px;
+        margin-left: 0px;
+        top: 20px; /* 이미지를 가운데로 보내기 위해 앱솔루트 한다음 레프트 반으로 와주고 와이드값의 반 값을 마진으로 보내줌 */
+        margin: 0 auto;
+        }
+        #gnb {
+        position: relative;
+        top: 20%;
+        margin-top: -0px;
+        width: 100%;
+        right: 0px;
+        height: 40px;
+        margin-top: 20px;
+        }
+        #gnb li {
+        float: left;
+        width: 25%;
+        }
+
+        #gnb a {
+        display: block; /*패딩 넣기 위해 지정*/
+        padding: 4px 4px;
+        font-size: 17px;
+        font-weight: bold;
+        color: #555;
+        line-height: 1.8;
+        text-align: center;
+        
+        }
+        
+        
+        .snsSet {
+        position: absolute;
+        bottom: 20px;
+        width: 90px; /* 어바웃과 컨택트 이미지의 와이드 값 더해서 정렬해줄것임(a에게 float let) */
+        right: 10%;/* 미디어쿼리구간에서 우측상단으로 올릴것이기 때문에 오른쪽 기준으로 설정 */
+        margin-right: -45px;
+        display: none;
+        }
+        .snsSet a {
+        float: left;
+        }
+        .snsSet img {
+        max-width: 100%;/*너 지금이 제일 큰거야 라고 적용(더이상 이미지가 커지지 않게)*/
+        }
+        
+        
+        
+        
+        
+    
+    
+    
+    
+
+
+
+
+    }
+
+/* 479px 이하구간 */
+@media (max-width:479px) {
+
+    header {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;/*배경색이 투명해져라*/
+        z-index: 10;/*얘는 같은 선상에 있는 형제들끼리만 적용할수있음*/
+    }
+
+
+    nav {
+    display: none;
+    }
+    section {
+    width: 100%;
+    margin-left: 0;
+    z-index: 2;
+    
+    }
+
+    article {
+    display: none;
+    }
+
+    article:nth-child(1) {
+    display: block;
+    width: 100%;
+    height: 100%;/*얘는 포지션의 픽스드만(픽스드가?) 설정할수있음*/
+    position: fixed;
+    }
+
+
+    /* header 콘텐츠 */
+    header h1 {
+    background-image: url(../img/logo1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* 백그라운드지정=로고가 움직일 일은 없겠지만 수정하면 움직일수 있으니까 지정해주는게 좋음 */
+    background-position: center center;
+    /* 기존 width값 180에서 140으로 줄이고 height값이 안맞기 때문에 센터센터설정해줌 */
+    text-indent: -9999px;
+    width: 140px;
+    height: 136px; /*이미지의 크기 확인해서 크기만큼 지정해줌*/
+    position: absolute;
+    left: 50%;
+    margin-left: -70px;
+    top: 70px;} /* 이미지를 가운데로 보내기 위해 앱솔루트 한다음 레프트 반으로 와주고 와이드값의 반 값을 마진으로 보내줌 */
+    
+    #gnb {
+    position: absolute;
+    top: 240px;
+    margin-top: 0px;
+    width: 250px;
+    right: 50%;
+    margin-right: -125px;
+
+    }
+    #gnb li {
+    margin-bottom: 15px;
+    }
+
+    #gnb a {
+    display: block; /*패딩 넣기 위해 지정*/
+    padding: 8px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.8;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    }
+    
+    .snsSet {
+    position: absolute;
+    bottom: 50px;
+    width: 90px; /* 어바웃과 컨택트 이미지의 와이드 값 더해서 정렬해줄것임(a에게 float let) */
+    right: 50%;/* 미디어쿼리구간에서 우측상단으로 올릴것이기 때문에 오른쪽 기준으로 설정 */
+    margin-right: -45px;
+    display: none;
+    }
+    .snsSet a {
+    float: left;
+    }
+    .snsSet img {
+    max-width: 100%;/*너 지금이 제일 큰거야 라고 적용(더이상 이미지가 커지지 않게)*/
+    }
+    
+    
+    
+    
+    /* 배경 글씨 조절 */
+    article span {display: none;}
+    
+
+
+    
+    
+
+
+    }

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+
+ul {list-style: none;}
+a {text-decoration: none;
+    color: #555;}
+img {border: none;
+    vertical-align: bottom;}
+body {font-family: 'Righteous', cursive;}
+
+
+/* 로고설정 */
+h1 {
+position: fixed;
+width: 200px;
+height: auto; /*안에있는 이미지에서 오토이다*/
+top: 50px;
+left: 50px;
+z-index: 10 ; /*최대 값은 3(= 형제자가 3개 = 1*3)으로 볼수 있다, 최대값 세기 귀찮거나 하면 임의로^^ */
+}
+
+h1 img {
+width: 100%;
+height: auto;
+}
+
+
+/* gnb설정 */
+#gnb {
+position: fixed;
+left: 0;
+top: 50%;
+margin-top: -120px; /* a의 높이 값이 60px이고 *4개 하면 총 길이가 240px이다
+ -> 그러면 top의 값이 50%에서 240px으로 밑으로 늘어나서 떨어지기 때문에 그의 반 값인 120px을 빼줌 */
+z-index: 10;
+}
+
+#gnb li{
+
+}
+
+#gnb a {
+display: block;
+width: 200px;
+height: 60px;
+text-align: right;
+border-top: solid 1px #111 ;
+font-size: 14px;
+box-sizing: border-box;
+opacity: 0.8;
+transition: all 0.5s;
+}
+#gnb li:hover a {
+font-size: 24px;
+opacity: 1;
+}
+#gnb li:nth-child(1):hover a {
+color: #d4164c;
+border-color: #d4164c;
+}
+#gnb li:nth-child(2):hover a {
+color: #fff;
+border-color: #fff;
+}
+#gnb li:nth-child(3):hover a {
+color: #ffec6a;
+border-color: #ffec6a;
+}
+#gnb li:nth-child(4):hover a {
+color: #005a89;
+border-color: #005a89;
+}
+
+
+
+/* wrap설정 */
+#wrap {
+
+}
+section {
+width: 100%;
+height: 700px;/*임시설정*/
+background-size: cover;
+background-position: right center;
+background-attachment: fixed; /*fixed랑 비슷한 의미, 화면에 붙게됌, 밑으로 붙고 위로 쌓인다 */
+position: relative;
+overflow: hidden;/*가둬버리자*/
+}
+section:nth-child(1) {
+background-image: url(/img/bg1.jpg);
+}
+section:nth-child(2) {
+background-image: url(/img/bg2.jpg);
+}
+section:nth-child(3) {
+background-image: url(/img/bg3.jpg);
+}
+section:nth-child(4) {
+background-image: url(/img/bg4.jpg);
+}
+
+section img {
+position: absolute;/*따로따로*/
+}
+
+
+
+/* 이미지 상세설정 */
+.p11 {bottom: 20px;    right: 20px;}
+.p12 {bottom: -40px;    right: 130px;}
+.p13 {top: 180px;    right: 60px;}
+
+.p21 {bottom: -480px;    right: -180px;}
+.p22 {bottom: -40px;    right: 130px;}
+
+.p31 {bottom: 30px;    right: 180px;}
+.p32 {bottom: -270px;    right: 110px;}
+.p33 {bottom: -130px;    right: -700px;}
+
+.p41 {bottom: -120px;    right: 20px;}
+.p42 {bottom: -180px;    right: 0px;}
+
+

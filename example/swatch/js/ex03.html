@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스움직임이펙트</title>
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    
+</head>
+<body>
+    
+
+    <div class="box">
+        <div class="mainimg">
+            <img src="../img/bg1.jpg" alt="">
+        </div>
+
+        <p>Lorem ipsum, <span class="style1">dolor</span> sit <span class="style2">amet</span> consectetur <span class="style3">adipisicing elit</span>. <br>
+            Sint neque doloremque inventore, <span class="style4">fugit</span> tempore quis incidunt velit dolore <span class="style5">explicabo</span> suscipit laboriosam nulla vel! </p>
+    </div>
+
+    <div class="count">
+        <p>X좌표 : <em> 00 </em></p>
+        <p>Y좌표 : <em> 00 </em></p>
+    </div>
+
+    <div class="cursor">
+        
+    </div>
+
+
+    <style>
+        * {margin: 0; padding: 0;}
+
+        body {background-color: rgb(173, 61, 173);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            perspective: 800;}
+
+        .box { position: fixed;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 500;}
+
+        .box p {font-size: 28px;
+            color: #fff;
+            line-height: 2;}
+
+        .box span {border-bottom: dashed 3px #fff;
+            display: inline-block; /*글씨와 밑줄간의 간격 설정 하려면 디스플레이 인라인블럭과 패딩 값 지정해줌*/
+            padding-bottom: 2px;
+            background-color: #333;}
+
+
+
+        .count {position: fixed;
+            font-size: 30px;
+            font-weight: bold;
+            right: 150px;
+            top: 50px;
+            color: #fff;}
+
+
+        .cursor {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border-radius: 50%; /*동그라미로만들기*/
+            z-index: 9999;
+            pointer-events: none;
+            background-color: #fff;
+        }
+        
+
+
+
+        .mainimg {width: 50%;
+            height: 60%;
+            background-color: #ccc;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .mainimg img {
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            width: 110%;
+            height: 110%;
+            transition: transform 500ms cubic-bezier(0.25,0.46,0.45,0.84);
+            transform: translate(0px,0); /*픽셀값 조정하여 위치 움직여주기*/
+        }
+        
+        .box p {
+            position: absolute;
+        }
+
+
+        .cursor.on3 {
+            background-color: aquamarine;
+            opacity: 0.5;
+            transform: scale(30) rotate(45deg);
+            border-radius: 0%;
+        }
+
+    </style>
+
+
+
+
+
+    <script>
+
+        $(document).ready(function(){
+
+            // 마우스가 윈도우에서 움직일때... 커서가 마우스를 따라다녀라
+            $(window).mousemove(function(e){
+
+                let x = e.pageX;
+                let y = e.pageY;                
+                // 좌표 표시하기
+                $('.count p').eq(0).children('em').text(x)  //eq =  선택자
+                $('.count p').eq(1).children('em').text(y)
+
+
+                // 커서의 css를 변경하겠다 (=커서가 마우스커서의 옆에 와있으니 가운데로 옮기기 위해 위치 조정)
+                $('.cursor').css({'left':x-10,'top':y-10})
+
+
+            })
+
+
+
+
+
+            // 1.
+            // 마우스가 style2 에 들어갔을때 커서가 커져라
+            $('.style2').mouseenter(function(){
+                // 커서가 커져라
+                $('.cursor').css({'width':'50px','height':'50px','border-radius':'20%'})
+
+            })
+            // 마우스가 style2 에 나왔을때 커서가 원래대로 돌아가라
+            $('.style2').mouseleave(function(){
+                // 커서가 전의값으로 돌아와라
+                $('.cursor').css({'width':'20px','height':'20px','border-radius':'50%'})
+
+            })
+
+            // 2. 1대로 일일이 지정해주기 힘드니 클래스 on값으로 지정해주겠다.
+            // 마우스가 style3에 들어갔을때 on3값을 더해줘라 -> css에 cursor의 on3값 추가하기
+            $('.style3').mouseenter(function(){
+                $('.cursor').addClass('on3')
+            })
+            // 마우스가 나왔을때 on3값을 빼줘라
+            $('.style3').mouseleave(function(){
+                $('.cursor').removeClass('on3')
+            }) // ------------> 이렇게 했을때 마우스가 떠나면 온 값이 들어갓다 나갓다 하는데 옆의 style2에 들어갓다 나오면 다시 css값이 적용됌 -> 위의 css를 주석 처리하거나 다시 class on으로 변경하면 제대로 됌=css와 on값이 충돌함(css값이 더 먼저 적용되는것 같음)
+            
+
+
+
+            
+
+
+
+
+
+
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // $(document).ready(function(){
+
+    //         // 마우스가 윈도우에서 움직일때... 커서가 마우스를 따라다녀라
+    //         $(window).mousemove(function(e){
+
+    //             let x = e.pageX;
+    //             let y = e.pageY;
+
+    //             $('.cursor').css({'left':x-10,'top':y-10})
+
+    //         })
+    //         // mainimg 에서 마우스가 움직이면 나를 따라다녀라.
+    //         $(mainimg).mousemove(function(e){
+
+    //             let x = e.pageX;
+    //             let y = e.pageY;
+
+    //             $('.cursor').css({'left':x-10,'top':y-10})
+    //             let reX = $(window).width()/2-x;
+    //             let reY = $(window).height()/2-y;
+
+    //             $('.mainimg img').css({'transform':'translate('+reX+''px','+reY+''px')})
+
+    
+    //             })
+
+    //     })
+    
+
+
+    </script>
+
+
+</body>
+</html>

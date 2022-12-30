@@ -78,6 +78,148 @@ $('.p41').css({'bottom': -120-posy/30, 'right': 20-posx/30})
 $('.p42').css({'bottom': -180+posy/30, 'right': 0+posx/30})
 
 
+})
+
+
+// 스크롤바의 위치값 찾아내기
+
+$(window).scroll(function(){
+
+    let sc =  $(this).scrollTop()  //나의 스크롤 탑값을 변수로 지정하자
+
+    $('h1').text(sc)
+
+    // 애니메이트작성법 .animate({속성명:속성값},지속시간);  ----->지속시간은 1/1000 초 
+
+    let ht = $(window).height();
+
+    // if(sc>=0 && sc<ht ){
+    //     $('#gnb li').removeClass('on')
+    //     $('#gnb li').eq(0).addClass('on')
+    // }
+
+    // if(sc>=ht && sc<ht*2 ){
+    //     $('#gnb li').removeClass('on')
+    //     $('#gnb li').eq(1).addClass('on')
+    // }
+
+    // if(sc>=ht*2 && sc<ht*3 ){
+    //     $('#gnb li').removeClass('on')
+    //     $('#gnb li').eq(2).addClass('on')
+    // }
+
+    // if(sc>=ht*3 && sc<ht*4 ){
+    //     $('#gnb li').removeClass('on')
+    //     $('#gnb li').eq(3).addClass('on')
+    // } --------------------- 간략하게 하기
+
+    // 반복문설정
+    for (var ab=0; ab<5; ab++){
+        if(sc>=ht*ab && sc<ht*(ab+1)){
+            $('#gnb li').removeClass('on')
+            $('#gnb li').eq(ab).addClass('on')
+        }
+    }
+
+});
+
+
+
+
+
+
+// // 마지막 li를 클릭했을때, scrollTop을 0으로 가게 만들어라.
+// $('#gnb li').eq(3).click(function(){
+
+//     $('html,body').animate({'scrollTop':'2907px'},1400,'easeOutBounce') 
+//      //animate는 css의 transition과 중복돼서 출렁거릴수 있음-한군데에서만 써도됌
+//     // 에이징효과    // https://superkts.com/jquery/@easingEffects
+    
+    
+// })
+
+
+
+
+
+
+// li를 클릭했을때, scrollTop을 해당높이로 가게 만들어라.
+$('#gnb li').click(function(){
+
+    // 클릭했을때 나의 순번찾기
+    let i = $(this).index();
+    let ht = $(window).height(); //윈도우의 높이를 찾아라
+
+
+
+
+     //  클릭했을때 나에게 클래스 on 값을 붙여라.
+    $('#gnb li').removeClass('on')
+    $(this).addClass('on')
+
+
+
+    $('html,body').animate({'scrollTop':ht*i},1400,'easeOutBounce')
+
+})
+
+
+// 애니메이트효과 주기 
+// 마우스 휠을 올렸을때, 마우스 휠을 내렸을떄 화면이 바뀌어라.
+$('section').mousewheel(function(event,delta){
+
+
+    // 마우스를올렸을때
+    if(delta>0) {
+        let prev = $(this).prev().offset().top;
+        $('html,body').stop().animate({'scrollTop':prev},1400,'easeOutBounce')
+    }
+
+
+    // 마우스를내렸을때
+    else if(delta<0){
+        let next = $(this).next().offset().top;
+        $('html,body').stop().animate({'scrollTop':next},1400,'easeOutBounce')
+
+    }
+})
+
+
+
+
+
+
+// h1 에 마우스가 들어갔을때 나의 위치값을 찾아라. 
+
+$('h1').mouseenter(function(){
+
+    let abc= $(this).offset().top;
+    alert(abc)
+})
+
+
+
+
+
+
+//     // 스크롤 설정
+
+// // 섹션에서 마우스 휠을 올렸을때 내렸을때, 움직인다.
+// $('section').mousewheel(function(event,delta){
+
+//     if(delta>0){  //만약 델타가 기준이 클때 = 마우스를 올렸을때 다음과같은 일이 일어난다
+//         //이전페이지로이동
+//         let prev = $(this).prev().offset().top;  //prev = 요소 => 이전 / offset=위치값
+//         $('html,body').stop().animate({'scrollTop':prev},1400)
+//     }
+//     else if (delta<0){
+//         //다음페이지로이동
+//         let next = $(this).next().offset().top;   //prev = 요소 => 이전
+//         $('html,body').stop().animate({'scrollTop':next},1400)
+//     }
+// })
+
+
 
 })
 
@@ -87,6 +229,5 @@ $('.p42').css({'bottom': -180+posy/30, 'right': 0+posx/30})
 
 
 
-})
 
 

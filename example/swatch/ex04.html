@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 제이쿼리연결 -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/jquery-ui.js"></script>  <!-- 에이징효과 -->
+<script src="jquery-mousewheel-main/jquery.mousewheel.js"></script>
+
+
+<body>
+    <header>
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+            <li>menu7</li>
+            <li>menu8</li>
+        </ul>
+    </header>
+
+    <div id="sect">
+        <section>section1</section>
+        <section>section2</section>
+        <section>section3</section>
+        <section>section4</section>
+        <section>section5</section>
+        <section>section6</section>
+        <section>section7</section>
+        <section>section8</section>
+    </div>
+
+
+    <style>
+
+
+
+
+ /* * {margin: 0;
+        padding: 0;}
+    header {position: fixed;
+        left: 0;
+    top: 0;
+width: 100%;
+height: 120px;
+display: flex;
+align-items: center;}
+header ul {display: flex;
+            justify-content: space-around;
+            align-items: center;
+width: 100%;
+height: 100%;
+background-color: coral;
+list-style: none;
+flex-wrap: wrap;}
+header li {list-style: none;
+           cursor: pointer;
+            color: #fff;
+            font-size: 28px;
+            height: 100%;
+            width: 12.5%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+header li:hover {background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+                color: black;
+            text-shadow: 0 0 5px #fff;} 
+
+section {width: 100%;
+    display: flex;font: 5em sans-serif;
+    justify-content: center;
+align-items: center;
+color: #fff;} */
+
+
+ /* section:nth-child(1) {background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);}
+ section:nth-child(2) {background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);}
+ section:nth-child(3) {background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
+ section:nth-child(4) {background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);}
+ section:nth-child(5) {background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);}
+ section:nth-child(6) {background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);}
+ section:nth-child(7) {background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);}
+ section:nth-child(8) {background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);}
+ */
+
+
+
+
+      * {margin: 0; padding: 0;}
+
+        body {
+        }
+
+        header {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        left: 0;
+        top: 0;        
+        height: 50px;
+        width: 100%;
+        background-color: rgb(170, 166, 233);
+        z-index: 3;
+        }
+
+        header ul {
+        list-style: none;
+        display: flex;  
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        }
+
+
+
+        header li {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        color: #fff;
+        width: 12.5%;
+        height: 100%;
+        cursor: pointer;
+        }
+
+
+        #sect {
+
+        }
+
+        section {
+            display: flex;
+        flex-direction: column;
+        position: fixed;
+
+        background-color: rgb(204, 172, 130);
+        width: 100%;
+        height: 600px;
+        background-attachment: fixed; /*fixed랑 비슷한 의미, 화면에 붙게됌, 밑으로 붙고 위로 쌓인다 */
+        position: relative;
+        overflow: hidden; /*가둬버리자*/
+        justify-content: center;
+        align-items: center;
+        }   
+
+        section:nth-child(1) {
+        background-color: rgb(128, 217, 242);
+        }
+        section:nth-child(2) {
+        background-color: rgb(233, 185, 185);
+        }
+        section:nth-child(3) {
+        background-color: rgb(239, 208, 146);
+        }
+        section:nth-child(4) {
+        background-color: rgb(243, 250, 215);
+        }
+        section:nth-child(5) {
+        background-color: rgb(181, 240, 175);
+        }
+        section:nth-child(6) {
+        background-color: rgb(146, 214, 214);
+        }
+        section:nth-child(7) {
+        background-color: aquamarine;
+        }
+        section:nth-child(8) {
+        background-color: rgb(234, 196, 255);
+        }
+
+        
+
+
+
+    </style>
+
+
+
+
+
+
+
+    <script>
+$(document).ready(function(){
+
+
+
+
+    let ht = $(this).height()
+
+    $('section').height(ht)
+
+    $(window).resize(function(){
+
+        let ht = $(this).height()
+        $('section').height(ht)
+
+    });
+
+
+    $('header li').click(function(){
+
+    let i = $(this).index();
+    let ht = $(window).height();
+    let oht= $('section').eq(i).offset().top
+
+    $('html,body').stop().animate({'scrollTop':ht*i},1400)
+    $('section').eq(i).text(oht)
+    })
+
+
+
+// // 브라우저의 높이값 찾기-------------------------------------
+// let ht = $(window).height(); /*window=브라우저*/
+// console.log(ht)  //=646
+// // section의 높이를 찾아라
+// let sectht = $('section').height();
+// console.log(sectht) //=600
+// // section의 가로값을 찾아라
+// let sectwd = $('section').width();
+// console.log(sectwd) //=1269
+
+
+
+
+
+
+
+
+// 스크롤바의 위치값 찾아내기
+
+$(window).scroll(function(){
+
+let sc =  $(this).scrollTop()  //나의 스크롤 탑값을 변수로 지정하자
+
+
+})
+
+
+// // 마우스에서 휠을 올렸을때 내렸을때, 움직인다.
+// $(window).mousewheel(function(event,delta){
+
+//     if(delta>0){  //만약 델타가 기준이 클때 = 마우스를 올렸을때 다음과같은 일이 일어난다
+//         $('section').text('마우스를 올렸습니다.') // 섹션에 마우스를 올렸습니다 라는 글씨가 나와라
+//     }
+//     else if (delta<0){
+//         $('section').text('마우스를 내렸습니다.')
+//     } ↓
+// })
+
+
+
+
+// 섹션에서 마우스 휠을 올렸을때 내렸을때, 움직인다.
+$('section').mousewheel(function(event,delta){
+
+if(delta>0){  //만약 델타가 기준이 클때 = 마우스를 올렸을때 다음과같은 일이 일어난다
+    //이전페이지로이동
+    let prev = $(this).prev().offset().top;  //prev = 요소 => 이전
+    $('html,body').stop().animate({'scrollTop':prev},1400)
+}
+else if (delta<0){
+    //다음페이지로이동
+    let next = $(this).next().offset().top;   //prev = 요소 => 이전
+    $('html,body').stop().animate({'scrollTop':next},1400)
+}
+})
+
+
+// 애니메이트효과 주기 
+// 마우스 휠을 올렸을때, 마우스 휠을 내렸을떄 화면이 바뀌어라.
+$('section').mousewheel(function(event,delta){
+
+
+// 마우스를올렸을때
+if(delta>0) {
+    let prev = $(this).prev().offset().top;
+    $('html,body').stop().animate({'scrollTop':prev},1400,'easeOutBounce')
+}
+
+
+// 마우스를내렸을때
+else if(delta<0){
+    let next = $(this).next().offset().top;
+    $('html,body').stop().animate({'scrollTop':next},1400,'easeOutBounce')
+
+}
+})
+
+
+
+
+
+
+
+// li를 클릭했을때, scrollTop을 해당높이로 가게 만들어라.
+$('header li').click(function(){
+
+// 클릭했을때 나의 순번찾기
+let i = $(this).index();
+let ht = $(window).height(); //윈도우의 높이를 찾아라.
+
+//  클릭했을때 나에게 클래스 on 값을 붙여라.
+$('#gnb li').removeClass('on')
+$(this).addClass('on')
+
+
+// 애니메이트작성법 .animate({속성명:속성값},지속시간);  ----->지속시간은 1/1000 초 
+$('html,body').stop().animate({'scrollTop':ht*i},1400,'easeOutBounce')   //.stop() = 누적 쿠키가 쌓여 에러가 생기니 너 한번만 하고 멈춰 라는 뜻 
+
+})
+
+
+
+
+
+
+
+})
+    </script>
+
+    
+
+
+</body>
+</html>

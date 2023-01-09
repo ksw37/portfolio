@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+a {text-decoration: none;
+    color: #fff;}
+img {border: none;
+    vertical-align: bottom;}
+ul,ol {list-style: none;}
+
+/* 기본설정 */
+header {width: 100%;
+    height: 320px;
+    background-color: antiquewhite;}
+nav {width: 100%;
+    height: 100px;
+    background-color: burlywood;}
+#main {width: 100%;
+    height: 580px;
+    background-color: cadetblue;}
+#danate {width: 100%;
+    height: 250px;
+    background-color: cornflowerblue;}
+#promise {width: 100%;
+    height: 1640px;
+    background-color: darkgoldenrod;}
+#notice {width: 100%;
+    height: 920px;
+    background-color: darkolivegreen;}
+#name {width: 100%;
+    height: 2420px;
+    background-color: chocolate;}
+#window {width: 100%;
+    height: 2000px;
+    background-color: darksalmon;}
+#footer {width: 100%;
+    height: 290px;
+    background-color: darkgray;}
+.wrap {height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);}
+
+
+
+
+/* header 설정 */
+header {}
+header .wrap {position: relative;}
+header .logo {width: 490px;
+    height: 180px;
+    background-color: aqua;
+    position: fixed;
+    margin-top: 70px;
+    margin-bottom: 65px;
+    margin-left: 440px;
+
+    }
+header .util {position: absolute;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 40px;
+}
+.util a {
+    justify-content: space-around;}
+.util img {}
+header .today {position: absolute;
+    top: 0;
+    left: 0;}
+
+
+
+
+
+
+
+
+/* ------------------------------------------미디어쿼리구간------------------------------------------- */
+/* 1450px이상일때 */
+@media (min-width: 1450px) {
+
+    .wrap {width: 1440px;
+        margin: 0 auto;}
+}

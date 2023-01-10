@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+
+
+* {margin: 0;
+    padding: 0;}
+img {vertical-align: bottom;}
+ul {list-style: none;}   
+
+
+/* 레이아웃 */
+.wrap {width: 800px;
+    height: 560px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+.box_img {width: 760px;
+        height: 470px;
+    background-color: #333;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 10px;}
+.thumbnail {height: 75px;
+    width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    
+        display: flex;
+    align-items: center;}
+
+
+/* 박스이미지 를 한곳에 모아둠 */
+.box_img>p {position: absolute;
+    left: 0;
+    top: 0;
+display: none;}
+.box_img>p:nth-child(1) {display: block;}
+
+/* 컨테이너 이미지를 가로정렬 */
+
+.container {width: 720px;
+height: 75px;
+overflow: hidden;
+position: relative;}
+.container ul {display: flex;
+position: absolute;
+width:960px ;
+top: 0;
+transition: all 0.8s;}
+
+.p1 { left:0px;
+    animation: ani1 80s linear infinite;}
+.p2 {left: 960px;
+    animation: ani2 80s linear infinite;}
+
+
+
+@keyframes ani1 {
+    0% {left: 0;}
+    50% {left: -960px;}
+    50.0001% {left: 960px;}
+    100% {left: 0;}
+}
+
+@keyframes ani2 {
+    0% {left: 960px;}
+    50%{left: 0;}
+    100%{left: -960px;}
+    
+}
+
+.container:hover ul {animation-play-state: paused;} /* 컨테이너에 마우스를 올렸을때 ul이 {애니메이션 재생 동작을 : 일시정지해라} */
+
+.container li:hover {transform: scale(1.1);} 
+
+
+
+.container li {}
+    
+    
+/* 좌우버튼설정 */
+.left {margin-right: 2px;}
+.right {margin-left: 2px;}
+
+
+
+
+.popUp {position: absolute;
+left: 0;
+top: 0;
+background-color: rgba(255, 255, 255, 0.6);
+width: 100%;
+height: 100%;
+
+text-align: center;
+line-height: 4;
+font-size: 20px;
+font-weight: bold;
+letter-spacing: 10px;
+display: none;
+
+}
+
+
+
+
+/* 
+
+/* 전체설정 
+* {margin: 0; padding: 0;}
+
+ul {list-style: none;}
+li {list-style: none;}
+
+img {border: 0;
+    vertical-align: bottom;}
+
+
+
+
+
+
+/* 갤러리설정 
+#gallery {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 200px;
+        margin-bottom: 300px;
+        /*display flex가 아니면 저스티파이나 얼라인은 소용 없음/ 마진 레프트,라이트 오토로 중앙설정해줘야함
+        블럭도 의미 없음=div가 이미 블럭이기 때문에
+        width: 800px;
+        height: 560px; /*너비,높이값 설정해줘야 위아래로 설정할수 있음
+        }
+
+/* 이미지설정------------------------------------------------ 
+#image {width: 760px;
+height: 470px;  /*높이값 설정해줘야 밑에 애들이 올라와 붙지 않음
+margin-bottom: 20px;}
+/* 이미지 한군데 모으기 
+#image>p {
+        position: absolute;
+
+        display: none;} /*모은 이미지 안보이게 하고
+
+#image>p:nth-child(1) {display: block} /*첫번째 사진만 보이게 하기
+#image img {width: 100%;
+        height: auto;}
+
+
+/* 썸네일설정--------------------------------------------- 
+#thumbnail {
+    width: 800px;
+    height: 75px;
+    display: flex;
+}
+
+
+.left {position: absolute;
+z-index: 50;
+margin-right: 10px;}
+.right {position: absolute;
+z-index: 50;
+margin-left: 730px;
+}
+
+
+/* 컨테이너설정 
+.container {width: 720px;
+            height: 150px; /*사진 18개가 다 보이니까 넓이 설정해서
+        /* overflow: hidden; 넘치지 않게 6개만 보이게 하기 
+    position: relative;}
+.container ul {display: flex;
+position: absolute;
+left: 0;
+transition: all 0.4s;
+margin-left: 15px;
+}
+.container li {}
+ */
+
+
+

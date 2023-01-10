@@ -18,7 +18,7 @@ nav {width: 100%;
 #main {width: 100%;
     height: 580px;
     background-color: cadetblue;}
-#danate {width: 100%;
+#donate {width: 100%;
     height: 250px;
     background-color: cornflowerblue;}
 #promise {width: 100%;
@@ -48,24 +48,174 @@ header .wrap {position: relative;}
 header .logo {width: 490px;
     height: 180px;
     background-color: aqua;
-    position: fixed;
+    position: absolute;
     margin-top: 70px;
     margin-bottom: 65px;
     margin-left: 440px;
-
     }
 header .util {position: absolute;
-    top: 0;
+    top: 5px;
     right: 0;
     width: 260px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.util a {
-    justify-content: space-around;}
-.util img {}
+.util a {display: block;
+    margin: 0 auto;}
+.util img {width: 40px;
+    height: 40px;}
 header .today {position: absolute;
     top: 0;
-    left: 0;}
+    left: 0;
+    font-weight: bold;
+    font-size: 25px;}
+
+
+/* nav 설정 */
+nav {}
+nav .wrap {}
+.gnb {width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #A3BFBA ;}
+.gnb li {display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    color: #fff;}
+    .gnb li:hover p {color: #3d3030;
+        line-height: 1.7;
+        border-bottom: #3d3030 solid 1px;
+        font-weight: bold;
+        /* text-decoration: underline; */
+        }
+
+
+
+/* main 설정 */
+#main {}
+#main .wrap {}
+
+.slide {width: 100%;
+    height: 580px;
+    position: relative;
+    overflow: hidden;}
+.slide ul {display: flex;
+    width: auto;
+    height: 580px;}
+.slide li {width: 100px;
+    height: 580px;
+    min-width: 180px;
+        /* background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+        position: absolute;
+        }
+        .slide li:nth-child(1) {background-image: url(images/);}
+
+.btn {}
+.btn ul {}
+.btn li {}
+
+    /* .btn {position: absolute;
+            
+            left: 50%;
+            bottom:50px;
+            z-index: 999;}
+        .btn ul { list-style: none;
+                    display: flex;
+                }
+        .btn ul li {background-image: url(images/);
+                    background-position:0 -16px;
+                    width: 14px;
+                    height: 15px;
+                    margin: 0 5px;}
+                .btn ul li.on {background-position:0 0px;} */
+
+
+
+/* donate 설정 */
+#donate {}
+#donate .wrap {background-color: #F2F2F0;
+    border-radius: 20px;
+    display: flex;}
+.dona {background-color: #d1d996;
+    border-radius: 20px;
+    width: 210px;
+    height: 80px;}
+.dona p {text-align: center;
+    line-height: 80px;
+    font-size: 36px;
+    color: #3d3030;}
+
+.heart {background-color: #d1d996;
+    border-radius: 50%;
+    width: 145px;
+    height: 145px;
+    position: relative;
+}
+.heart a {display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    }
+.heart a img {width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+.heart a p {text-align: center;
+    font-size: 25px;}
+
+
+.calen {background-color: #d1d996;
+    border-radius: 50%;
+    width: 145px;
+    height: 145px;
+    position: relative;
+}
+.calen a {display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    }
+.calen a img {width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+.calen a p {text-align: center;
+    font-size: 25px;}
+
+
+.card {background-color: #d1d996;
+    border-radius: 50%;
+    width: 145px;
+    height: 145px;
+    position: relative;
+}
+.card a {display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    }
+.card a img {width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+.card a p {text-align: center;
+    font-size: 25px;}
 
 
 

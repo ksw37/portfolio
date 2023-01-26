@@ -1,0 +1,1594 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+/* 타이틀
+font-family: 'Gamja Flower', cursive;   */
+
+/* 텍스트
+font-family: 'Cute Font', cursive;   */
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+a {text-decoration: none;
+    color: #fff;
+    font-family: 'Gamja Flower'}
+img {border: none;
+    vertical-align: bottom;}
+ul,ol {list-style: none;}
+
+h2 {font-family: 'Gamja Flower';
+    font-size: 25pt;
+    text-shadow: 3px 3px 0.8px #bfae99;}
+
+h3 {font-family: 'Gamja Flower';
+    color: #bfae99;
+    font-size: 20pt;}
+p {font-family: 'Cute Font', cursive;
+    color: #3d3030;
+    font-size: 18pt;
+    letter-spacing: 2px;
+}
+li {font-family: 'Cute Font', cursive;}
+
+
+/* 기본설정 */
+header {width: 100%;
+    height: 200px;
+    /* background-color: antiquewhite; */}
+nav {width: 100%;
+    height: 80px;
+    /* background-color: burlywood; */ }
+#main {width: 100%;
+    height: 680px;
+    /* background-color: cadetblue; */ }
+#donate {width: 100%;
+    height: 180px;
+    /* background-color: cornflowerblue; */ }
+#promise {width: 100%;
+    height: 1250px;
+    /* background-color: darkgoldenrod; */ }
+#notice {width: 100%;
+    height: 820px;
+    /* background-color: darkolivegreen; */ }
+#name {width: 100%;
+    height: 1820px;
+    /* background-color: chocolate; */ }
+#window {width: 100%;
+    height: 1400px;
+    /* background-color: darksalmon; */ }
+footer {width: 100%;
+    height: 120px;
+    background-color: #bfae99;}
+.wrap {height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+}
+
+.more:hover {background-color: #bdc0ab;
+    border-color: #d1d996;
+    transform: scale(1.2);}
+
+
+/* header 설정 */
+header svg {
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+header {}
+header .wrap {position: relative;}
+header .logo {width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+.logo img {width: 440px;
+    height: 130px;}
+header .util {position: absolute;
+    top: 5px;
+    right: 0;
+    width: 260px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.util a {display: block;
+    margin: 0 auto;}
+.util img {width: 40px;
+    height: 40px;}
+header p {position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 16pt;}
+
+
+/* nav 설정 */
+
+nav {background-color: #e6933d;}
+nav .wrap {position: relative;}
+.gnb {width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: #e6933d ;}
+.gnb li {display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.gnb>li>a {display: block;
+    font-size: 23pt;
+    color: #fff;
+    box-sizing: border-box;
+}
+    .gnb>li>a:hover {color: #3d3030;
+        line-height: 1.5;
+        border-bottom: #3d3030 solid 1px;
+        font-weight: bold;
+        }
+    .gnb:hover .gnbsub {opacity: 1;
+                    top: 80px;}
+
+.gnbsub {width: 1440px;
+        height: 140px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #e6933d;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 555555;
+        transition: all 0.7s;
+        opacity: 0;}
+.gnbsub ul {width: 100%;
+            height: 100%;            
+            position: relative;
+            display: flex;
+            flex: 1;
+            flex-direction: column;}
+.gnbsub li {}
+.gnbsub>ul>li>a {font-size: 12pt;}
+.gnbsub>ul>li>a:hover {color: #3d3030;}
+
+
+
+
+
+
+
+/* main 설정 */
+#main {}
+#main .wrap {}
+
+.slide {width: 100%;
+    height: 680px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;}
+.slide ul {display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;}
+.slide li {width: 100%;
+    height: 100%;
+    min-width: 180px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        }
+        .slide li:nth-child(1) {background-image: url(../images/slide1.jpg);
+        left: 0;
+        z-index: 111;}
+        .slide li:nth-child(2) {background-image: url(../images/slide2.png);}
+        .slide li:nth-child(3) {background-image: url(../images/slide3.png);}
+
+.btn {position: absolute;    
+        left: 50%;
+        top:890px;
+        z-index: 999;
+        cursor: pointer;}
+.btn ul { list-style: none;
+            display: flex;
+        }
+.btn ul li {background-image: url(../images/btnVisual.png);
+            background-position:0 -16px;
+            width: 14px;
+            height: 15px;
+            margin: 0 10px;}
+.btn ul li.on {background-position:0 0px;}
+
+
+
+/* donate 설정 */
+#donate {}
+#donate .wrap {background-color: #A3BFBA;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;}
+.dona {background-color: #3d3030;
+    border-radius: 20px;
+    width: 210px;
+    height: 80px;}
+.dona h2 {text-align: center;
+    line-height: 80px;
+    font-size: 28pt;
+    color: #fff;}
+
+#donate .wrap div {background-color: #3d3030;
+        border-radius: 50%;
+        width: 125px;
+        height: 125px;
+        position: relative;
+        animation: new02 1s linear infinite alternate;}       
+#donate p {text-align: center;
+font-size: 18pt;
+color: #fff;
+animation: new01 1s linear infinite alternate;}
+#donate img {width: 50px;
+height: 50px;
+margin-top: 10px;
+margin-bottom: 5px;
+animation: new01 1s linear infinite alternate;}
+#donate a {display: flex;
+flex-direction: column;
+position: absolute;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;}  
+
+#donate .wrap div.dona {background-color: #3d3030;
+    border-radius: 20px;
+    width: 210px;
+    height: 80px;}
+.dona h2 {text-align: center;
+    line-height: 80px;
+    font-size: 28pt;
+    color: #fff;}
+
+
+
+    @keyframes new01 {
+        0% {transform: scale(1.0);
+            opacity: 0.6;}
+        100%{transform: scale(1.1);
+            opacity: 1;}}
+    @keyframes new02 {
+            
+        0% {box-shadow: 0 0 20px 0px rgba(61, 54, 54, 0.05);
+        }
+        100% {box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.4);
+        }}
+
+
+
+
+
+/* circle 설정 */
+.circle {position: absolute;
+        left: -5%;
+        top: 1150px;
+        width: 810px;
+        height: 565px;
+        width: 100%;
+        height: 100%;
+        transition: all 0.8s;
+        }
+
+
+
+
+
+/* promise 설정 */
+#promise {}
+#promise .wrap {position: relative;}
+
+#promise .wrap h2 {position:absolute;
+        color: #fff;
+        font-size: 28pt;
+        top: 18%;
+        left: 12%;
+        z-index: 11;}
+
+
+.prom {position: absolute;
+        
+        z-index: 2;
+        top: 270px;
+        width: 1440px;
+        height: 100%;
+        display: block;
+        justify-content: center;
+        }
+        .prom::after {content: "";
+            display: block;
+            clear: both;
+        }
+
+.prom li {width: 340px;
+        height: 390px;
+        background-color: #F2F2F0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        margin-top: 60px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgb(63, 62, 62);   
+        }
+        .prom li:nth-child(1) {margin-left: 155px;}
+        .prom li:nth-child(2) {margin-left: 55px;}
+        .prom li:nth-child(3) {margin-left: 55px;}
+        .prom li:nth-child(4) {margin-left: 150px;}
+        .prom li:nth-child(5) {margin-left: 55px;}
+        .prom li:nth-child(6) {margin-left: 55px;}
+
+.prom li a {width: 305px;
+        height: 250px;
+        margin-top: -15px;
+        }
+.prom li a img {width: 305px;
+        height: 270px;
+        }
+.prom li div {display: flex;
+        margin-top: 25px;
+        margin-left: -180px;
+        /* justify-content: center; */
+        align-items: center;
+        margin-bottom: 5px;
+}
+.prom li div .svgF {width: 20px;
+        height: 20px;
+        cursor: pointer;
+        }
+        .prom li div svg {width: 20px;
+            height: 20px;
+            cursor: pointer;
+            }
+        /* .prom li div svg .on {fill: red;} */
+.prom li div p {margin-right: 30px;
+        margin-left: 5px;
+        font-size: 16pt;
+}
+.prom li>p {color: #bfae99;
+        font-size: 20pt;
+        justify-content: left;
+        letter-spacing: 3px;
+        width: 100%;
+        left: 0;
+        margin-left: 30px;
+}
+#promise .wrap .more {background-color: #d1d996;
+    border-radius: 10px;
+    width: 55px;
+    height: 30px;
+    position: absolute;
+    right: 160px;
+    top: 18%;
+    font-size: 16pt;
+    text-align: center;
+    }
+#promise .wrap .more a {color: #3d3030;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* notice 설정 */
+#notice {}
+#notice .wrap {position: relative;}
+
+.tab_box {width: 1100px;
+        height: 70px;
+        position: relative;
+        z-index: 2;
+        top: 220px;}
+.titleBox {z-index: 2;
+        margin-left: 140px;}
+.titleBox ul {display: flex;}
+.titleBox li {width: 160px;
+    height: 130px;
+    background-color: #d1d996;
+    margin: 0 3px;
+    font-size: 25pt;
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+    }
+.titleBox li p {width: 160px;
+    height: 10px;
+    top: 0;
+    color: #fff;
+    font-family: 'Gamja Flower', cursive;
+    }
+    .titleBox .on {margin-top: 0;
+            z-index: 3;}
+    .titleBox .on p {color: #3d3030;
+            display: block;
+            margin-top: 80px;
+            font-weight: bold;
+    }
+.txtBox {width: 600px;
+            height: 370px;
+            background-color: #F2F2F0;
+            z-index: 1;
+            border-radius: 2px;
+            position: relative;
+            margin-top: -80px;
+            margin-left: 130px;
+            }
+.txtBox article {position: absolute;
+}
+.txtBox article ul {width: 500px;
+            height: 275px;
+            margin-top: 70px;
+            margin-left: 50px;
+            background-color: #F2F2F0;
+            display: block;
+            box-sizing: border-box;
+            overflow: hidden;
+            }
+.txtBox article ul li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            
+}
+.txtBox .notice {z-index: 1;}
+
+
+.txtBox article li a {
+    color: #3d3030;
+    letter-spacing: 3px;
+    font-family: 'Cute Font', cursive;
+    font-size: 18pt;
+    width: 100%;
+
+                    }
+.txtBox article li div { border: 4px solid #A3BFBA;
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+    vertical-align: middle;
+display: inline-block;
+box-sizing: border-box;
+transition: all 0.5s;
+}
+
+.txtBox article li:hover div{border:none;
+                            background-color:#A3BFBA; ;}
+
+.notice {}
+.oncast {}
+.oncast ul {}
+.oncast li {}
+.video {}
+.video ul {}
+.video li {}
+
+.video_box {z-index: 2;
+        width: 750px;
+        height: auto;
+        position: absolute;
+        right: 0;
+        top: 260px;
+}
+.video_box video {width: 100%;
+        height: 100%;}
+        .video_box video::-webkit-media-controls-play-button {display: none !important;}
+
+
+
+
+
+/* name 설정 */
+#name {}
+#name .wrap {position: relative;}
+#name .wrap h2 {color: #fff;
+        position: absolute;
+        right: 12%;
+        top: 10%;
+        }
+#name .wrap ul {position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 10%;
+        }
+#name .wrap li {width: 1300px;
+        height: 450px;
+        position: relative;
+        background-color: #F2F2F0;
+        margin-top: 70px;
+        display: flex;
+        }
+
+        #name .wrap li:nth-child(1) {left: -25%;}
+        #name .wrap li:nth-child(2) {right: -25%;}
+        #name .wrap li:nth-child(3) {left: -25%;}
+
+#name .wrap li img {z-index: 1;
+    position: absolute;
+    width: 590px;
+    height: 290px;
+}
+
+        #name .wrap li:nth-child(1) img {left: 15%;
+            top: 15%;
+            box-shadow: -10px 10px #e6933d;        
+        }
+        #name .wrap li:nth-child(2) img {right: 15%;
+            top: 15%;
+            box-shadow: 10px 10px #d1d996;        
+            }
+        
+        #name .wrap li:nth-child(3) img {left: 15%;
+            top: 15%;
+            box-shadow: -10px 10px #A3BFBA;        
+            }
+#name .wrap ul li .txt {width: 450px;
+        height: 380px;
+        position: absolute;
+        top: 15%;
+        z-index: 3;
+        display: inline-block;
+        box-sizing: border-box;
+        overflow: hidden; 
+        }
+#name .wrap ul li:nth-child(1) .txt {
+        left: 62%;}
+#name .wrap ul li:nth-child(2) .txt {
+        right: 62%;
+        }
+#name .wrap ul li:nth-child(3) .txt {
+        left: 62%;}
+
+#name .wrap ul li .txt h3 {}
+#name .wrap ul li .txt p {width: 100%;
+    height: 100%;
+}
+
+#name .square {border: 5px solid #e6933d;
+            width: 100px;
+            height: 100px;            
+            position: absolute;
+            z-index: 2;
+            }
+        #name .wrap ul li:nth-child(1) .square {
+                    border: 5px solid #e6933d;
+                    left: 55%;
+                    top: 10px;
+                    }
+        #name .wrap ul li:nth-child(2) .square {
+                    border: 5px solid #d1d996;
+                    right: 55%;
+                    top: 10px;
+                    }
+        #name .wrap ul li:nth-child(3) .square {
+                    border: 5px solid #A3BFBA;
+                    left: 55%;
+                    top: 10px;
+                    }
+
+#name .wrap li .txt h3 {
+    margin-bottom: 40px;
+    color: #bfae99;
+    }
+#name .wrap ul li .txt p {font-size: 14pt;
+        letter-spacing: 1.6;}
+
+#name .wrap li .go {width: 50px;
+        height: 50px;
+        background-color: #3d3030;
+        position: absolute;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        right: 0;
+        bottom: 10%;
+        margin-right: -25px;
+        transition: all 0.8s;
+        }
+        #name .wrap li:nth-child(2) .go {width: 50px;
+            height: 50px;
+            background-color: #3d3030;
+            position: absolute;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            left: 0;
+            bottom: 10%;
+            margin-left: -25px;
+            }
+
+.go:hover {transform: rotateY(590deg) scale(2);}
+
+#name .more {background-color: #d1d996;
+    border-radius: 10px;
+    width: 55px;
+    height: 30px;
+    position: absolute;
+    left: 22%;
+    top: 10%;
+    font-size: 16pt;
+    text-align: center;
+    }
+#name .more a {color: #3d3030;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/* window 설정 */
+#window {position: relative;}
+#window .wrap {display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;}
+#window h2 {color: #fff;
+    position: absolute;}
+    #window h2:nth-child(1) {top: 150px;
+            left: 150px;}
+    #window h2:nth-child(2) {bottom: 150px;
+            right: 150px;}
+
+#window .wrap article {
+    width: 500px;
+    height: 550px;
+    background-color: #F2F2F0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 500px;
+    height: 550px;
+    background-color: #F2F2F0;
+    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 65px;
+    top: 100px; */
+}
+
+#window .wrap  article .half1 {background-color: #F2F2F0;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    bottom: 90%;
+    z-index: -1;
+    width: 100%;
+    height: 300px;
+
+}
+#window .wrap .half2 {background-color: #F2F2F0;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    bottom: 90%;
+    z-index: -1;
+    width: 100%;
+    height: 300px;
+}
+#window article .txt {width: 350px;
+    height: 640px;
+    margin: 0 auto;
+    margin-top: -35%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+#window article .txt h3 {
+    margin-bottom: 30px;
+}
+#window article .txt p {font-size: 14pt;
+    letter-spacing: 1.6;}
+
+#window .more {background-color: #d1d996;
+    border-radius: 10px;
+    width: 55px;
+    height: 30px;
+    position: absolute;
+    left: 230px;
+    top: 530px;
+    font-size: 16pt;
+    text-align: center;
+    }
+#window .more a {color: #3d3030;
+    width: 100%;
+    height: 100%;
+}
+#window .bgBox {width: 100%;
+    height: 700px;
+    background-color: #A3BFBA;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+
+#window .circle1 {position: absolute;
+    width: 610px;
+    height: 565px;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    animation: ani 3s linear infinite ;
+    }
+#window .circle2 {position: absolute;
+    width: 610px;
+    height: 565px;
+    bottom: 5%;
+    z-index: 2;
+    right: 5%;
+    animation: ani 3s linear infinite ;
+    }
+
+
+
+
+footer {width: 100%;
+    }
+footer .wrap {color: #fff;
+    z-index: 9999;
+}
+
+
+
+
+
+
+@keyframes ani {
+    0% {transform: rotate(0eeg);}
+100% {transform: rotate(360deg);}
+}
+
+
+
+
+/* ------------------------------------------미디어쿼리구간------------------------------------------- */
+/* 1450px이상일때###################################### */
+@media (min-width: 1450px) {
+
+    .wrap {width: 1440px;
+        margin: 0 auto;}
+}
+
+
+
+
+/* 768px이상 1449px이하일때########################### */
+
+@media (min-width:768px) and (max-width:1449px) {
+
+
+.wrap {width: 90%;}
+
+
+/* header 설정 */
+header svg {
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+header {}
+header .wrap {}
+header .logo {}
+.logo img {}
+header .util {
+    right: -10%;
+    width: 25%;
+}
+.util a {}
+.util img {width: auto;
+    height: auto;
+}
+header p {}
+
+
+/* nav 설정 */
+nav {}
+nav .wrap {width: 90%;
+    margin: 0 auto;}
+.gnb {width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;}
+.gnb li {}
+.gnb>li>a {
+    font-size: 16pt;
+}
+.gnb>li>a:hover {}
+.gnb:hover .gnbsub {}
+
+.gnbsub {width: 100%;
+    height: 180px;}
+.gnbsub ul {}
+.gnbsub li {}
+.gnbsub>ul>li>a {}
+.gnbsub>ul>li>a:hover {}
+
+
+
+
+
+
+
+
+/* main 설정 */
+#main {}
+#main .wrap {}
+
+.slide {}
+.slide ul {}
+.slide li {}
+        .slide li:nth-child(1) {}
+        .slide li:nth-child(2) {}
+        .slide li:nth-child(3) {}
+
+.btn {}
+.btn ul {}
+.btn ul li {}
+.btn ul li.on {}
+
+
+
+/* donate 설정 */
+#donate {}
+#donate .wrap {width: 90%;
+    margin: 0 auto;}
+.dona {}
+.dona h2 {}
+
+#donate .wrap div {}       
+#donate p {}
+#donate img {}
+#donate a {}  
+
+#donate .wrap div.dona {}
+.dona h2 {}
+
+
+
+
+
+
+@keyframes new01 {
+    0% {transform: scale(1.0);
+        opacity: 0.6;}
+    100%{transform: scale(1.1);
+        opacity: 1;}}
+@keyframes new02 {
+        
+    0% {box-shadow: 0 0 20px 0px rgba(61, 54, 54, 0.05);
+    }
+    100% {box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.4);
+    }}
+
+
+
+
+
+
+/* circle 설정 */
+.circle {}
+
+
+
+
+
+/* promise 설정 */
+#promise {}
+#promise .wrap {width: 90%;
+    margin: 0 auto;}
+
+#promise .wrap h2 {}
+
+
+.prom {width: 100%;
+    top: 23%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+        .prom::after {}
+
+.prom li {width: 30%;
+        height: 30%;
+        margin: 0 auto;
+}
+        .prom li:nth-child(1) {margin: 2.5% 1.5%;}
+        .prom li:nth-child(2) {margin: 2.5% 1.5%;}
+        .prom li:nth-child(3) {margin: 2.5% 1.5%;}
+        .prom li:nth-child(4) {margin: 2.5% 1.5%;}
+        .prom li:nth-child(5) {margin: 2.5% 1.5%;}
+        .prom li:nth-child(6) {margin: 2.5% 1.5%;}
+
+
+.prom li a {width: 90%;}
+.prom li a img {width: 100%;
+        height: 100%;
+        }
+.prom>li>div {
+    width: 100%;
+
+    margin: 0 auto;
+    margin-left: 5%;}
+
+.prom li div svg {}
+.prom li div p {}
+.prom li>p {
+        letter-spacing: 0.5px;}
+#promise .wrap .more {right: 5%;}
+#promise .wrap .more a {}
+
+
+
+
+/* notice 설정 */
+#notice {}
+#notice .wrap {}
+
+.tab_box {left: -10%;
+}
+.titleBox {}
+.titleBox ul {}
+.titleBox li {}
+.titleBox li p {}
+    .titleBox .on {}
+    .titleBox .on p {}
+.txtBox {}
+.txtBox article {}
+.txtBox article ul {}
+.txtBox article ul li {}
+.txtBox .notice {}
+
+
+.txtBox article li a {}
+.txtBox article li div {}
+
+.txtBox article li:hover div{}
+.notice {}
+.oncast {}
+.oncast ul {}
+.oncast li {}
+.video {}
+.video ul {}
+.video li {}
+
+.video_box {width: 60%;
+        top: 0;
+        right: -10%;
+}
+.video_box video {}
+        .video_box video::-webkit-media-controls-play-button {display: none !important;}
+
+
+
+
+
+
+
+/* name 설정 */
+#name {}
+#name .wrap {width: 90%;
+    position: relative;}
+#name .wrap h2 {}
+#name .wrap ul {}
+#name .wrap li {
+        width: 90%;
+        position: relative;
+        }
+
+        #name .wrap li:nth-child(1) {left: -15%;}
+        #name .wrap li:nth-child(2) {right: -30%;}
+        #name .wrap li:nth-child(3) {left: -15%;}
+        
+/* #name .wrap li:nth-child(1) {right: 15;}
+#name .wrap li:nth-child(2) {left: 10%;}
+#name .wrap li:nth-child(3) {right: 10%;} */
+
+#name .wrap li img {
+    width: 50%;
+    position: absolute;
+}
+
+        #name .wrap li:nth-child(1) img {
+            left: 5%;}
+        #name .wrap li:nth-child(2) img {
+            right: 5%;}        
+        #name .wrap li:nth-child(3) img {
+            left: 5%;}
+#name .wrap ul li .txt {
+        width: 30%;
+        height: 80%;}
+#name .wrap ul li:nth-child(1) .txt {}
+#name .wrap ul li:nth-child(2) .txt {}
+#name .wrap ul li:nth-child(3) .txt {}
+
+#name .wrap ul li .txt h3 {}
+#name .wrap ul li .txt p {}
+
+#name .square {}
+        #name .wrap ul li:nth-child(1) .square {left: 50%;}
+        #name .wrap ul li:nth-child(2) .square {right: 50%;}
+        #name .wrap ul li:nth-child(3) .square {left: 50%;}
+
+#name .wrap li .txt h3 {}
+#name .wrap ul li .txt p {}
+
+#name .wrap li .go {}
+        #name .wrap li:nth-child(2) .go {}
+
+.go:hover {}
+
+#name .more {left: 10%;}
+#name .more a {}
+
+
+
+
+
+
+
+
+
+
+
+/* window 설정 */
+#window {}
+#window .wrap {
+    width: 90%;
+    margin: 0 auto;
+
+}
+#window h2 {}
+    #window h2:nth-child(1) {}
+    #window h2:nth-child(2) {}
+
+#window .wrap article {
+position: relative;
+margin: 0 2.5%;
+
+}
+
+#window .wrap  article .half1 {}
+#window .wrap .half2 {}
+#window article .txt {margin: 0 2%;
+    margin-top: -40%;}
+#window article .txt h3 {}
+#window article .txt p {}
+
+#window .more {
+    position: absolute;
+    left: 42%;
+
+    }
+#window .more a {}
+#window .bgBox {}
+
+
+#window .circle1 {}
+#window .circle2 {}
+
+
+
+
+
+
+
+footer {}
+footer .wrap {width: 90%;
+    margin: 0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+/* 600px이상 767px이하일때########################### */
+
+@media (min-width:600px) and (max-width:767px) {
+
+.wrap {width: 90%;}
+
+
+
+/* header 설정 */
+
+header svg {z-index: 11111;
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    fill: #3d3030;
+
+    padding: 10px;
+    cursor: pointer;
+}
+
+header {}
+header .wrap {}
+header .logo {width: 100%;
+    text-align: center;}
+.logo img {width: 300px;
+    height: auto;
+    }
+header .util {
+    right: -5%;
+    width: 20%;
+    top: 7%;
+
+}
+.util a {}
+.util img {width: auto;
+    height: auto;
+}
+header .wrap p {position: absolute;
+    width: 130px;
+    margin: 0 auto;
+    left: 88%;
+    top: 80%;}
+
+
+
+
+
+
+    
+
+
+/* nav 설정 */
+nav {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    top: 2%;
+    z-index: 1111;
+    transition: all 0.8s;
+    left: -100%;
+
+}
+
+nav.on {left: 0;
+}
+
+nav .wrap {width: 80%;
+    height: 300px;
+    margin: 0 auto;
+
+    }
+.gnb {display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;}
+.gnb li {
+    margin-left: 15%;
+}
+.gnb>li>a {
+    font-size: 16pt;
+}
+.gnb>li>a:hover {}
+.gnb:hover .gnbsub {position: absolute;
+    top: 0;
+    left: 90%;
+}
+
+.gnbsub {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    left: -100%;
+
+    transition: all 1s;
+
+
+
+}
+.gnbsub ul {display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;}
+.gnbsub li {margin-left: 10%;
+    margin-right: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: flex-start ;
+    width: 20%;
+    text-align: left;
+    left: 0;
+
+}
+.gnbsub>ul>li>a {font-size: 10pt;
+    margin: 0 0;
+    color: #3d3030;
+}
+.gnbsub>ul>li>a:hover {color: #fff;}
+
+
+
+
+
+
+
+
+
+
+/* main 설정 */
+#main {}
+#main .wrap {}
+
+.slide {}
+.slide ul {}
+.slide li {}
+        .slide li:nth-child(1) {}
+        .slide li:nth-child(2) {}
+        .slide li:nth-child(3) {}
+
+.btn {
+top: 87%;}
+.btn ul {}
+.btn ul li {}
+.btn ul li.on {}
+
+
+
+/* donate 설정 */
+#donate {}
+#donate .wrap {width: 90%;
+    margin: 0 auto;}
+.dona {}
+.dona h2 {}
+
+#donate .wrap div {}       
+#donate p {}
+#donate img {}
+#donate a {}  
+
+#donate .wrap div.dona {}
+.dona h2 {}
+
+
+@keyframes new01 {
+    0% {transform: scale(1.0);
+        opacity: 0.6;}
+    100%{transform: scale(1.1);
+        opacity: 1;}}
+@keyframes new02 {
+        
+    0% {box-shadow: 0 0 20px 0px rgba(61, 54, 54, 0.05);
+    }
+    100% {box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.4);
+    }}
+
+
+
+
+
+/* circle 설정 */
+.circle {}
+
+
+
+
+
+/* promise 설정 */
+#promise {}
+#promise .wrap {}
+
+#promise .wrap h2 {}
+
+
+.prom {width: 100%;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+        .prom::after {}
+
+.prom li {position: absolute;    
+        width: 40%;
+        height: 30%;
+        margin: 0 auto;
+        transition: all 0.5s;
+}
+        .prom li:nth-child(1) {
+            top: 0;
+            left: -15%;
+        }
+        .prom li:nth-child(2) {
+            top: 0%;
+            left: 30%;
+        }
+        .prom li:nth-child(3) {
+            top: 0%;
+            right: 0%;
+        }
+        .prom li:nth-child(4) {
+            bottom: 30%;
+            left: -15%;
+        }
+        .prom li:nth-child(5) {
+            bottom: 30%;
+            left: 25%;
+        }
+        .prom li:nth-child(6) {
+            bottom: 30%;
+            right: 0%;
+        }
+
+
+        .prom li:nth-child(1):hover {
+            top: 5%;
+            left: -10%;
+        }
+        .prom li:nth-child(2):hover {
+            top: 5%;
+            left: 30%;
+        }
+        .prom li:nth-child(3):hover {
+            top: 5%;
+            right: 5%;
+        }
+        .prom li:nth-child(4):hover {
+            bottom: 25%;
+            left: -10%;
+        }
+        .prom li:nth-child(5):hover {
+            bottom: 25%;
+            left: 25%;
+        }
+        .prom li:nth-child(6):hover {
+            bottom: 25%;
+            right: 5%;
+        }
+
+.prom li:hover {transform: scale(1.2);
+            z-index: 111;}
+
+
+
+
+
+            
+
+
+.prom li a {width: 90%;}
+.prom li a img {width: 100%;
+        height: 100%;
+        }
+.prom>li>div {
+    width: 100%;
+
+    margin: 0 auto;
+    margin-left: 5%;}
+
+.prom li div svg {}
+.prom li div p {}
+.prom li>p {
+        letter-spacing: 0.5px;}
+#promise .wrap .more {right: 0%;}
+#promise .wrap .more a {}
+
+
+
+
+/* notice 설정 */
+#notice {}
+#notice .wrap {}
+
+.tab_box {left: -10%;
+}
+.titleBox {}
+.titleBox ul {}
+.titleBox li {}
+.titleBox li p {}
+    .titleBox .on {}
+    .titleBox .on p {}
+.txtBox {}
+.txtBox article {}
+.txtBox article ul {}
+.txtBox article ul li {}
+.txtBox .notice {}
+
+
+.txtBox article li a {}
+.txtBox article li div {}
+
+.txtBox article li:hover div{}
+.notice {}
+.oncast {}
+.oncast ul {}
+.oncast li {}
+.video {}
+.video ul {}
+.video li {}
+
+.video_box {display: none;}
+
+.video_box video {}
+        .video_box video::-webkit-media-controls-play-button {display: none !important;}
+
+
+
+
+
+
+
+/* name 설정 */
+#name {}
+#name .wrap {width: 90%;
+    position: relative;}
+#name .wrap h2 {}
+#name .wrap ul {}
+#name .wrap li {
+        width: 100%;
+        position: relative;
+
+        }
+
+        #name .wrap li:nth-child(1) {left: 0%;}
+        #name .wrap li:nth-child(2) {right: -11%;}
+        #name .wrap li:nth-child(3) {left: 0%;}
+
+
+#name .wrap li img {
+    width: 50%;
+    position: absolute;
+}
+
+        #name .wrap li:nth-child(1) img {
+            left: 5%;}
+        #name .wrap li:nth-child(2) img {
+            right: 5%;}        
+        #name .wrap li:nth-child(3) img {
+            left: 5%;}
+#name .wrap ul li .txt {
+        width: 30%;
+        height: 80%;}
+#name .wrap ul li:nth-child(1) .txt {}
+#name .wrap ul li:nth-child(2) .txt {}
+#name .wrap ul li:nth-child(3) .txt {}
+
+#name .wrap ul li .txt h3 {font-size: 16pt;
+                }
+#name .wrap ul li .txt p {font-size: 12pt;
+                margin-top: -20%;}
+
+#name .square {}
+        #name .wrap ul li:nth-child(1) .square {left: 50%;}
+        #name .wrap ul li:nth-child(2) .square {right: 50%;}
+        #name .wrap ul li:nth-child(3) .square {left: 50%;}
+
+#name .wrap li .txt h3 {}
+#name .wrap ul li .txt p {}
+
+#name .wrap li .go {}
+        #name .wrap li:nth-child(2) .go {}
+
+.go:hover {}
+
+#name .more {}
+#name .more a {}
+
+
+
+
+
+
+
+
+
+
+
+/* window 설정 */
+#window {}
+#window .wrap {
+    width: 90%;
+    margin: 0 auto;
+
+}
+#window h2 {}
+    #window h2:nth-child(1) {}
+    #window h2:nth-child(2) {}
+
+#window .wrap article {
+position: relative;
+margin: 0 2.5%;
+
+}
+
+#window .wrap  article .half1 {}
+#window .wrap .half2 {}
+#window article .txt {margin: 0 2%;
+    margin-top: -40%;}
+#window article .txt h3 {}
+#window article .txt p {}
+
+#window .more {
+    position: absolute;
+    left: 42%;
+
+    }
+#window .more a {}
+#window .bgBox {}
+
+
+#window .circle1 {}
+#window .circle2 {}
+
+
+
+
+
+
+
+footer {}
+footer .wrap {width: 90%;
+    margin: 0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+

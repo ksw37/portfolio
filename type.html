@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css,javascript포함</title>
+</head>
+
+<body>
+    <p class="txt">타이핑되는 글자를 씁니다.</p>
+    <p class="line"> </p>    <!-- line에 txt를 출력할것임
+        ->글자 하나하나 잘라내서 텍스트 시킬것이다 -->
+
+
+    <style>
+        p {margin: 0; padding: 0;}        
+        .txt {}
+        .line {border-right: 1px solid #ccc;
+                display: inline-block;
+            animation: ani 0.3s infinite ;}
+
+        @keyframes ani {
+            0% {border-right: 1px solid #fff;}
+            50% {border-right: 1px solid #000;}
+            100% {border-right: 1px solid #fff;}
+        }
+    </style>
+
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            // txt의 글자를 불러와라. ->글자를 불러와서 변수로 설정
+            let txt = $('.txt').text()  //.text= 글자로 불러옴 / html=..? 이랑다름
+            console.log(txt)
+
+            let txtN = txt.split('')  //split=한글자씩 떼어내라 , 가운데 칼질해라
+            console.log(txtN)
+
+            
+            let i = -1; 
+
+            //다음에 와서 붙어라 = append
+
+            // let i = -1; // i는 0부터 불러와라 (3)
+            // setInterval(function(){  //자동으로 작동해라 (1)
+            //     if (i<14)i++; // 14는 콘솔로그에 array 눌러보면 14개 나옴(글자수) =>length가 끝인걸 확인하면됌
+            //     $('.line').append(txtN[i]); //0번째에 해당하는 글자를 txtN의 글자를 불러와라(2)
+            // },100);
+
+
+            let ti = txtN.length;
+            
+            setInterval(function(){ 
+                if (i<ti)i++; 
+                $('.line').append(txtN[i]); 
+            },1000);
+
+
+
+
+
+
+
+
+
+        })
+    </script>
+</body>
+</html>

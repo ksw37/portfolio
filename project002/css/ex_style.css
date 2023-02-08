@@ -1,0 +1,82 @@
+@chartset 'UTF-8';
+
+/* 전체설정 */
+*{margin: 0 ; padding:  0;}
+ul {list-style: none;}
+a {color: #000;
+    text-decoration: none;}
+img {border: none;
+    vertical-align: bottom;} /*실질적으로 얘는 탑이던 미들이던 보틈이던 상관없음*/
+body {overscroll-behavior-x: hidden;}
+
+
+/* 구글폰트, 눈누폰트 등에서 import 미리설정
+font-family를 주석으로 가둬서 임시저장 */
+
+
+/* 우선순위 css 는 덮어쓰기 가능 파일
+제일 상위자 -  태그네임
+두번째 상위자 - #wrap section (누구의 자손으로 불렀을때) -> section의 class네임으로 변경 안됌
+세번째 상위자 - ID값  */
+
+
+/* 크기설정 임시설정*/
+/* 제이쿼리에서 높이를 화면기준으로 변경될 section - 800px (=>제이쿼리 가서 윈도우 헤이츠 찾은 후 변경:변수지정해서)
+내용에 따라 높이가 자동변환될 section - 1000px / 500px (=>오토로 변경) */
+section:nth-child(1) 
+{   width: 100%;
+    height: 800px;}
+section:nth-child(2) {
+    width: 100%;
+    height: 1000px;}
+section:nth-child(3) {
+    width: 100%;
+    height: 1000px;}
+section:nth-child(4) {
+    width: 100%;
+    height: 800px;}
+section:nth-child(5) {
+    width: 100%;
+    height: ;
+}
+section:nth-child(6) {
+    width: 100%;
+    height: ;
+}
+section:nth-child(7) {
+    width: 100%;
+    height: 500px;
+}
+section:nth-child(8) {
+    width: 100%;
+    height: 500px;}
+section:nth-child(9) {
+    width: 100%;
+    height: 500px;}
+
+
+/* 공간설정 -내용 모두 삽입시 삭제예정*/
+section:nth-child(1) {background-color: #333;}
+section:nth-child(2) {background-color: #222;}
+section:nth-child(3) {background-color: #111;}
+section:nth-child(4) {background-color: #fff;}
+section:nth-child(5) {background-color: #eee;}
+section:nth-child(6) {background-color: #ddd;}
+section:nth-child(7) {background-color: #ccc;}
+section:nth-child(8) {background-color: #bbb;}
+section:nth-child(9) {background-color: #aaa;}
+
+
+/* 미디어쿼리구간********************************************************************************************** */
+
+/* 1440px 이상일때 */
+@media (min-width:1440px){
+
+    #wrap {width: 1280px;
+        margin-left: auto;
+        margin-right: auto;}
+
+}
+
+
+

@@ -5,18 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>santa maria novella</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    
+    <!-- 스크롤아웃 사이트 데모 안의 겟 스크롤 씨디엔 -->
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <!-- 외부스타일시트연결 -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
     <!-- 제이쿼리CDN -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-
     <!-- 외부제이쿼리연결 -->
     <script src="js/js.js"></script>
-   
+    
     <!-- 폰트어썸연결 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <!-- 소요시간
-    2/6:2h30m, 2/7:5h50m, -->
+    2/6:2h30m, 2/7:5h50m, 2/8:5h50m, 2/9:5h50m, 2/10:6h40m-->
 </head>
 <body>
 
@@ -35,7 +40,7 @@
                 <a href="#">MENU<i class="fa-solid fa-bars"></i></a>
             </div>            
         </div>
-        <nav>
+        <nav class="">
             <div class="close_bar">
                 <h1><a href="#"><img src="img/logo.png" alt=""></a>
                 </h1>                
@@ -69,13 +74,21 @@
     </header>
 
     <section class="main">
+        <!-- <img src="img/main1.png" alt=""> -->
+        <!-- <img src="img/main2.png" alt=""> -->
+        <p> 
+            <!-- DISCOVER OUR WORLD OF WONDER <br> -->
+            Santa Maria Novella</p>
+        <div class="scroll"><p>Scroll</p></div>
+        <div class="cursor"></div>
         <video loop autoplay muted>
             <source src="img/main.mp4" type="video/mp4">
         </video>
+
     </section>
 
     <section class="collect">
-        <article>
+        <article >
             <div>
                 
             </div>
@@ -88,7 +101,7 @@
                     <a href="#">Veiw All</a>
             </div>
         </article>
-        <article>
+        <article  >
             <div>
                 <h3>Unveiling the World of Fresia</h3>
                 <h2>Fresia</h2>
@@ -101,7 +114,7 @@
                 
             </div>
         </article>
-        <article>
+        <article  >
             <div>
                 
             </div>
@@ -116,7 +129,7 @@
         </article>
     </section>
 
-    <section class="brand">
+    <section class="brand" >
         <video loop autoplay muted>
             <source src="img/main-ourstory.mp4" type="video/mp4">
         </video>
@@ -136,7 +149,7 @@
 
     <section class="new">
         <article>
-            <div>
+            <div class="NNimg" data-scroll>
                 <img src="img/main-iris_waifu2x_art_noise1_scale-removebg.png" alt="">
             </div>
             <a href="#">
@@ -153,13 +166,13 @@
                     <h4>YOUR DAILY RENAISSANCE.</h4>
                 </div>
             </a>
-            <div>
+            <div class="Nimg" data-scroll>
                 <img src="img/main-idralia.png" alt="">
             </div>
         </article>
     </section>
 
-    <section class="product">
+    <section class="product" data-scroll>
         <article>            
             <div class="container">
                 <!-- <img src="img/Fragrances.jpg" alt="">         -->
@@ -206,7 +219,7 @@
         </article>
     </section>
 
-    <section class="letter">
+    <section class="letter" data-scroll>
         <div>
             <span>
                 <h4>Stay in touch with Officina Profumo-Farmaceutica di Santa Maria Novella</h4>
@@ -227,5 +240,42 @@
 
     <footer><h5>Copyrights ⓒ 2022 by KSW. All Rights reserved.</h></footer>
 
+        <style>
+            [data-scroll] {
+            opacity: 0;
+            /* transition: opacity 2.5s; 트랜지션을 오피시티에만 적용해라 */
+            transition: all 1.5s;
+            }
+            [data-scroll="in"] {
+            opacity: 1;
+            transform: scale(1);
+            }
+            [data-scroll="out"] {
+            opacity: 0;
+            transform: scale(0.5);
+            }
+            /* 얘네는 이미 다 cdn에 적용되어 있는 애들이기 때문에 데이타스크롤만 써주면 됌 */
+            .Nimg[data-scroll="in"] {
+                margin-left: 0;
+            }
+            .Nimg[data-scroll="out"] {
+                margin-left: -1000px;
+            }
+            .NNimg[data-scroll="in"] {
+                margin-right: 0;
+            }
+            .NNimg[data-scroll="out"] {
+                margin-right: -1000px;
+            }
+
+        </style>
+
+        <script>
+            ScrollOut();
+
+        </script>
 </body>
 </html>
+
+
+

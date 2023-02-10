@@ -23,16 +23,22 @@ body {
 }
 h2 {color: #fff;
     font-size: 68pt;
-    font-family: 'KIMM_Bold';}
+    font-family: 'KIMM_Bold';
+    font-style: normal;
+}
 h3 {color: #fff;
     font-size: 18pt;
-    font-family: 'KIMM_Bold';}
+    font-family: 'KIMM_Bold';
+    font-style: normal;}
+
 h4 {font-size: 36pt;
-    color: #fff;}
+    color: #fff;
+    font-style: normal;}
 
 p {color: #fff;
     font-size: 14pt;
-    font-family: 'KIMM_Bold';}
+    font-family: 'KIMM_Bold';
+    font-style: normal;}
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Itim&display=swap');
 /* 
@@ -120,19 +126,28 @@ h1 a img {width: 100%;
 .util a i {}
 
 .menu_bar {position: absolute;
-    right: 0;}
+    right: 0;
+}
 .menu_bar a {color: #DDB300;}
 .menu_bar a i {padding: 0 15px;}
 
         /* 네비설정 */
 nav {
+    top: -2000px;
     background-color: #000000;
     width: 100%;
     height: 1070px;
     position: absolute;
     transition: all 0.8s;
-    display: none;
 }
+header .on {display: block;
+    top: 0;
+    background-color: #000000;
+    width: 100%;
+    height: 1070px;
+    position: absolute;
+    transition: all 0.8s;}
+
 nav .close_bar {display: flex;
         width: 100%;
         height: 100px;        
@@ -167,8 +182,7 @@ nav>.gnb>li {font-size: 56pt;
 }
 .gnb>li:hover ul {opacity: 1;}
 
-.gnb>li>ul>li {
-        
+.gnb>li>ul>li {        
         width: 100%;
 }
 .gnb>li>ul>li a {font-size: 36pt;
@@ -186,27 +200,58 @@ nav>.gnb>li {font-size: 56pt;
 
 .gnb>li>ul>li:nth-child(3) {transform: translateX(200px);}
 
-/* .gnb>li>ul>li:nth-child(1) {}
-.gnb>li>ul>li:nth-child(2) {
-    position: absolute;
-    left: 5%;}
-.gnb>li>ul>li:nth-child(3) {
-    position: absolute;
-    left: 10%;
-} */
 
 
 
 /* 메인설정 */
-.main {
-    /* position: relative; */
+.main {}
+.main img {position: absolute;
+        z-index: 1;
+        top: 20%;
+        left: 5%;
 }
-
 .main video {width: 100%;
     height: auto;
     min-width: 1500px;
-
+    opacity: 0.5;
     }
+.main>p {position: absolute;
+    z-index: 1;
+    /* font-family: 'Ballet', handwriting; */
+    font-family: 'Dancing Script', cursive;
+    font-size: 80pt;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+.main .scroll {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: #fff solid 1px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+    z-index: 1;
+    }
+
+.main .scroll p {font: 14pt 'Itim';
+    text-align: center;
+    line-height: 4;
+    }
+.main .cursor {
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+    user-select: none;
+    pointer-events: none;
+        }
+.cursor.style1 {width: 100px;
+        height: 100px;}
+
 
 
 /* 콜렉션설정 */
@@ -246,7 +291,8 @@ nav>.gnb>li {font-size: 56pt;
                                     100% {left: 0px;}
                                 } */
 .collect article div h3 {padding-top: 5%;
-                        padding-left: 32%;}
+                        padding-left: 32%;
+}
 .collect article div h2 {
                 width: 30%;
                 margin-top: 10px;
@@ -260,10 +306,12 @@ nav>.gnb>li {font-size: 56pt;
                 transform: rotate(-180deg);
                 text-align: center;
                 margin-bottom: 18%;
+
 }
 .collect article div p {width: 40%;
                 padding-left: 32%;
                 margin-top: -35%;
+
                 }
 .collect article div>a {
     width: 130px;
@@ -274,7 +322,12 @@ nav>.gnb>li {font-size: 56pt;
     right: 5%;
     bottom: 10%;
     text-align: center;
-    line-height: 2.4;}
+    line-height: 2.4;
+    font-style: normal;
+}
+
+
+
 
 
 /* 브랜드소개설정 */
@@ -303,11 +356,14 @@ nav>.gnb>li {font-size: 56pt;
 }
 .brand div h4 {font-size: 36pt;
                 color: #fff;
-                font-family:'Dancing Script', cursive;}
+                font-family:'Dancing Script', cursive;
+                font-style: normal;}
 .brand div h5 {font-size: 24pt;
                 color: #fff;
-                font-family:'Dancing Script', cursive;}
-.brand div p {font-family:'Dancing Script', cursive;}
+                font-family:'Dancing Script', cursive;
+                font-style: normal;}
+.brand div p {font-family:'Dancing Script', cursive;
+                font-style: normal;}
 
 
 
@@ -382,6 +438,18 @@ nav>.gnb>li {font-size: 56pt;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* 레터 설정 */
 .letter {background-image: url(../img/Group74.png);
         background-position: center center;
@@ -425,8 +493,9 @@ nav>.gnb>li {font-size: 56pt;
             left: 50%;
             transform: translate(-50%);
             margin-top: 5%;
+            z-index: 1;
         }
-.map iframe {}
+.map iframe {opacity: 0.8;}
 
 
 
@@ -444,6 +513,7 @@ footer h5 {
     top: 60%;
     left: 3%;
     color: #fff;
+    font-style: normal;
 
 }
 

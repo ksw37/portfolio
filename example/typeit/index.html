@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 타입잇 사이트에서 스크립트 주소 찾아서 붙여넣기 하기 -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+</head>
+<body>
+    
+    <h1 id="title">Lorem ipsum dolor sit amet elit.</h1>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            new TypeIt("#title")
+            .pause(3000) //3초 있다가 시작해라 =>3초있다가 지워라
+            .delete(3) //뒤 3글자를 지워라 (.까지 포함)
+            .type('green') //지우고 green을 다시 써라
+            .go(); //시작해라
+
+        })
+        // document.addEventListener('DOMContentLoaded' ---> =도큐먼트레디펑션
+    </script>
+</body>
+</html>

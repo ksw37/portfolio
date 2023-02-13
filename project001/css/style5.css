@@ -67,6 +67,7 @@ footer {width: 100%;
     border-color: #d1d996;
     transform: scale(1.2);}
 
+body {overflow-x: hidden;}
 
 /* header 설정 */
 header svg {
@@ -1768,8 +1769,8 @@ nav .wrap {width: 80%;
 
 /* donate 설정 */
 #donate {position: fixed;
-        right: 0;
-        top: 75%;
+        left: 0;
+        top: 20%;
         z-index: 111;
         width: 90px;
         }

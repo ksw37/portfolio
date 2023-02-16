@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서브 기본 설정</title>
+
+    
+    <!-- 폰트어썸연결 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+</head>
+<body>
+    
+    <header>
+        <div id="wrap">
+            <h1>
+                <a href="#"><img src="img/logo.png" alt=""></a>
+            </h1>
+            <div class="util">
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-circle-info"></i></a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <!-- <a href="#"><i class="fa-solid fa-book-user"></i></a> -->
+            </div>
+            <div class="menu_bar">
+                <a href="#">MENU<i class="fa-solid fa-bars"></i></a>
+            </div>            
+        </div>
+        <nav class="">
+            <div class="close_bar">
+                <h1><a href="#"><img src="img/logo.png" alt=""></a>
+                </h1>                
+                <div>
+                    <a href="#">close<i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+            <ul class="gnb">
+                <li><em>Company Policies</em>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Story</a></li>
+                    </ul>
+                </li>
+                <li><em>New Arrivals</em>
+                    <ul>
+                        <li><a href="#">L'Iris</a></li>
+                        <li><a href="#">Diffusers</a></li>
+                        <li><a href="#">Idralia Line</a></li>
+                    </ul>
+                </li>
+                <li><em>Fragrances</em>
+                    <ul>
+                        <li><a href="#">L'Iris - Eau de Parfum</a></li>
+                        <li><a href="#">Firenze 1221 Edition</a></li>
+                    </ul>
+                </li>
+                <li><em><a href="#">Eau de Cologne</a></e></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- 커서 설정 -->
+    
+    <section class="main">
+
+        <div class="cursor"></div>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <style>
+@charset 'UTF-8';
+
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {color: #fff;
+    text-decoration: none;}
+img {border: none;
+    vertical-align: bottom;}
+body {
+        background-color: #000;
+        overflow-x: hidden;
+    }
+
+/* 폰트설정 */
+
+/* 메인 */
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+h2 {color: #fff;
+    font-size: 68pt;
+    font-family: 'KIMM_Bold';
+    font-style: normal;
+}
+h3 {color: #fff;
+    font-size: 18pt;
+    font-family: 'KIMM_Bold';
+    font-style: normal;}
+
+h4 {font-size: 36pt;
+    color: #fff;
+    font-style: normal;}
+
+p {color: #fff;
+    font-size: 14pt;
+    font-family: 'KIMM_Bold';
+    font-style: normal;}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Itim&display=swap');
+/* 
+font-family: 'Dancing Script', cursive;
+font-family: 'Itim', cursive;
+ */
+
+@import url('https://fonts.bunny.net/css?family=ballet:400');
+/* font-family: 'Ballet', handwriting; */
+
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 헤더설정 */
+header {
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    display: flex;       
+    }
+header div {display: flex;
+    justify-content: space-between;
+    align-items: center;}
+
+header h1 {width: 150px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        color: #fff;
+        }
+h1 a {}
+h1 a img {width: 100%;
+        height: 100%;
+    }
+
+.util {position: absolute;
+    right: 10%;}
+.util a {padding: 0 15px;
+        color: #DDB300;}
+.util a i {}
+
+.menu_bar {position: absolute;
+    right: 0;
+}
+.menu_bar a {color: #DDB300;}
+.menu_bar a i {padding: 0 15px;}
+
+        /* 네비설정 */
+nav {
+    top: -2000px;
+    background-color: #000000;
+    width: 100%;
+    height: 1070px;
+    position: absolute;
+    transition: all 0.8s;
+    z-index: 111;
+}
+header .on {display: block;
+    top: 0;
+    background-color: #000000;
+    width: 100%;
+    height: 1070px;
+    position: absolute;
+    transition: all 0.8s;}
+
+nav .close_bar {display: flex;
+        width: 100%;
+        height: 100px;        
+    }
+nav .close_bar h1 {width: 150px;
+    height: 100px;
+    position: absolute;
+    left: 0;}
+nav .close_bar div {position: absolute;
+        right: 0;}
+.close_bar div a {padding: 0 15px;
+        color: #DDB300;
+}
+.close_bar div i {padding: 0 15px;}
+nav .gnb {color: #fff;
+    margin-top: 5%;
+}
+nav>.gnb>li {font-size: 56pt;
+    font-family: 'ghanachoco';
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 45px;
+    position: relative;
+    }
+.gnb>li>ul {position: absolute;
+        width: 100%;
+        height: 100%;
+    top: 30px;
+    left:50%;
+    opacity: 0;     
+    transition: all 0.8s;
+}
+.gnb>li:hover ul {opacity: 1;}
+
+.gnb>li>ul>li {        
+        width: 100%;
+}
+.gnb>li>ul>li a {font-size: 36pt;
+    font-family: 'Itim', cursive;
+    width: 100%;
+    display: block;
+    transform: skewX(-20deg);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.gnb>li>ul>li:nth-child(2) {transform: translateX(100px);
+
+                    }
+
+.gnb>li>ul>li:nth-child(3) {transform: translateX(200px);}
+
+
+
+
+
+
+/* 커서값 설정 */
+.main .cursor {
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+        }
+
+
+/* 메인설정 */
+
+.main {
+    /* background-color: #000; */
+    width: 100%;
+    height: 100%;
+}
+
+
+
+    </style>
+
+
+
+
+
+<!-- 제이쿼리CDN -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- 제이쿼리 gsap CDN -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    
+<script>
+
+$(document).ready(function(){
+    
+    $('body,html').scrollTop(0)
+
+//토글 메뉴 설정
+$('header .menu_bar').click(function(){
+
+    $('nav').removeClass('on')
+    $('nav').addClass('on')  
+
+})
+
+
+$('header .close_bar').click(function(){
+
+    $('nav').removeClass('on')
+
+})
+
+
+
+
+
+//마우스 효과
+
+$(window).mousemove(function(e){
+    gsap.to(".cursor", {duration: .3, left: e.pageX +5, top: e.pageY -10})
+            
+
+    //좌표값 구하기
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+
+
+    let standardX = $(window).width() - pageX;
+    let standardY = $(window).height() - pageY;
+
+
+
+});
+
+
+
+
+})
+
+</script>
+
+</body>
+</html>

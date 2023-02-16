@@ -81,9 +81,35 @@ $(window).mousemove(function(e){
 
 
 
+// 프래그런스 동영상 움직이기
+    //아티클에 마우스가 들어갔을때 동작해라
+    $('.fragrances article').mouseenter(function(){
+
+        // 이 비디오를 찾아라 0번째의 그것을 vid라고 하겠다
+        let vid = $(this).find('video').get(0)
+        //비디오가 재생되는데 처음으로 돌아가라
+        vid.currentTime=0
+        vid.play()
 
 
+        $(this).stop().animate({'width':'100%'},900)
+        $(this).find('video').animate({'opacity':1},800) //내꺼안에서 비디오를 찾아라 그리고 보이게해라 1.2초동안
+        $(this).find('h4').stop().animate({'right':'50px'},800)
+    
+    })
 
+    //아티클에 마우스가 떠났을때 동작해라
+    $('.fragrances article').mouseleave(function(){
+
+        let vid = $(this).find('video').get(0)
+        vid.pause() //마우스를 떠나도 동영상은 계속 돌아가고 있음=>그러니 떠나면 일시 정지 시켜놔야함
+        
+        $('.fragrances article').stop().animate({'width':'12%'},800)
+        $(this).find('video').animate({'opacity':0},600)
+        $(this).find('h4').stop().animate({'right':'300px'},700)
+        
+
+    })
 
 
 

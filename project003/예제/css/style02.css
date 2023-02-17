@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* root방식 - 전처리기법  */
+:root {
+    --main-color:#bf6396;
+    --point-color:#f28a2e;
+    --bg-color:#6a8fd9;
+    --bg-color02:#eecef2;
+    --bg-color03:#eeced2;
+    --bg-color04:#eecec2;
+    --main-font:'Nanum Gothic';
+    --main-wd:900px;
+}
+
+
+
+
+/* header설정 */
+header {position: fixed;
+    width: 250px; /*고쳐도 상관없음 ->js에서 밀리게 설정해줬기 때문에*/
+    height: 100%;
+    background-color: var(--bg-color02);
+    color: var(--main-color);
+    left: 0;
+    top: 0;
+    z-index: 10;}
+
+
+
+#wrap {
+    width: 100%;
+    /* 가로값을 100% 에서 120px 값을 뺀 계산식  
+    width: calc(100% - 120px);
+    width: -webkit-calc(100% - 120px); =>띄어쓰기 유의해야함(안하면 그냥 하이픈으로 인식함)
+    width: -moz-calc(100% - 120px);*/
+
+        height: 100%;
+    position: fixed;
+    background-color: var(--bg-color);
+    color: var(--point-color);
+left: 0;
+top: 0;}
+
+section {position: absolute;
+    width: 100%;
+    height: 800px;
+    transition: all 1.5s;}
+
+
+
+
+    section:nth-child(1) {left: 0;
+    top: 0;
+background-color: var(--bg-color03);
+}
+    section:nth-child(2) {
+        left: 00px;
+        top:100%;
+        background-color: var(--bg-color04);
+    }
+    section:nth-child(3) {
+        left: 00px;
+        top: 100%;
+        background-color: var(--bg-color);
+    }
+    section:nth-child(4) {
+        left: 100%;
+        top:0;
+        background-color: var(--bg-color02);
+    }
+    section:nth-child(5) {
+        
+        left: 0;
+        top: 0;
+        background-color: var(--bg-color03);
+        opacity: 0;
+    }
+
+
+    section.on {left: 0;
+    top: 0;
+opacity: 1;}
+
+
+
+

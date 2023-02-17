@@ -18,6 +18,50 @@ $(document).ready(function(){
 
 
 
+// 헤더 네비 설정
+// 클릭 누르면 보였다 안보였다 하기
+$('header div').click(function(){
+
+    $('header').addClass('on')
+})
+
+$('header').mouseleave(function(){
+
+    $('header').removeClass('on')
+})
+
+
+
+
+// 헤더 네비의 클릭 텍스트 애니마
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,151 @@
+@charset 'UTF-8';
+/* root 방식 - 전처리기법  */
+:root {
+
+   --main-color:#FCA806;
+   --point-color:#7233C3;
+   --bg-color1:#333333;
+   --bg-color2:#cccccc;
+   --bg-color3:#999999;
+   --main-font:'Nanum Gothic';
+   --main-wd:900px;
+
+}
+
+/* html {scroll-behavior: smooth;} -------js값 충돌하기 때문에 지워줌 */
+
+
+/* 폰트설정 */
+h2 {font-size: 100pt}
+h3 {font-size: 48pt;}
+h4 {font-size: 36pt;}
+h5 {font-size: 24pt;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 헤더설정 */
+header {position: fixed;
+        right: -150px;
+        top: 0;
+        background-color: var(--point-color);
+        width: 150px;
+        height: 100%;
+        transition: all 0.8s;}
+        header.on {right: 0;}
+header div {width: 50px;
+        height: 150px;
+        position: absolute;
+        background-color: var(--point-color);
+        writing-mode: tb-rl;
+        text-align: center;
+        font-size: 24pt;
+        color: #FCA806;        
+        top: 42%;
+        right: 150px;
+        cursor: pointer;
+    }
+    header div:hover {text-decoration: underline;}
+    
+header h1 {width: 100%;
+        height: 10%;
+        text-align: center;
+        padding: 25px 0;
+}
+header h1 a {width: 100%;
+        height: 100%;}
+header h1 a svg {width: 70px;
+        height: 70px;
+        }
+
+/* .material-symbols-outlined {
+
+    font-variation-settings:
+    'FILL' ,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48    
+  } */
+nav {width: 100%;
+    height: 90%;
+}
+nav ul {text-align: center;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: -20%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+nav ul li {border-bottom: #FCA806 2px solid;
+}
+nav ul li a {}
+
+
+
+
+
+/* wrap설정 */
+
+#wrap {width: 100%;
+   /* padding-right: 150px; */
+box-sizing: border-box;}
+
+   /* 섹션의 높이는 화면의 높이로 자바스크립트를 통해 
+   변환할 예정 */
+#wrap section {width: 100%;
+               height: 800px;}
+
+#wrap section:nth-child(1) {background-color: var(--bg-color2);}
+#wrap section:nth-child(2) {background-color: var(--bg-color3);}
+#wrap section:nth-child(3) {background-color: var(--bg-color2);}
+#wrap section:nth-child(4) {background-color: var(--bg-color3);}
+#wrap section:nth-child(5) {background-color: var(--bg-color2);}
+
+
+
+/* home 설정 */
+#home {}
+#home article {width: 100%;}
+
+#home .home1 {width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+#home .home1 .util {width: 10%;
+        height: 100%;
+        display: flex;
+
+        justify-content: space-around;
+        align-items: center;
+        }
+#home .home1 .util a {width: 50%;
+        }
+#home .home1 .util a svg {width: 30px;
+        height: 30px;
+        fill: #FCA806;
+        }
+
+#home .home1 h1 {width: 80%;
+}
+#home .home1 h1 a {display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 30%;}
+#home .home1 h1 a svg {padding: 10px 20px;
+        width: 70px;
+        height: 70px;}

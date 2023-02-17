@@ -17,8 +17,8 @@
         /* root방식 - 전처리기법  */
         :root {
 
-            --main-color:#c737bc;
-            --point-color:#ffff00;
+            --main-color:#FCA806;
+            --point-color:#7233C3;
             --bg-color:#333333;
             --main-font:'Nanum Gothic';
             --main-wd:900px;
@@ -29,7 +29,7 @@
 
     <!-- 외부스타일시트연결 -->    
     <!-- 1번째 롱페이지에서 화면스크롤전환페이지작성 -->
-    <link rel="stylesheet" href="css/style01.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- 2번째 고정화면에서 section이 나타나는구조 -->
 
     <!-- 3번째 총 4개의 html을 연결하는 구조 -->
@@ -39,35 +39,104 @@
     <script src="js/jquery-ui.min.js"></script>
     <!-- 외부스크립트연결 -->
     <script src="js/js.js"></script>
+    <!-- 구글아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- 부스트랩아이콘 (svg) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- 텍스트애니마 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <!-- 작업소요시간 -->
+    <!-- 2/17:4h -->
 </head>
 <body>
-    <header>
-        <h1><a href="index.html"></a> 지바노프</h1>
+    <header class="">
+        <div><span class="ml2">click!</span></div>
+        <h1><a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/>
+                <path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+            <!-- <span class="material-symbols-outlined"></span>  구글아이콘-->
+            </a>
+        </h1> 
         <nav><ul>
             <li><a href="#home">HOME</a></li>
             <li><a href="#pro">WHO IS ME?</a></li>
-            <li><a href="#gal">MY ALBUM</a></li>
-            <li><a href="#pa4">COLLABORATION</a></li>
-            <li><a href="#pa5">GALLERY</a></li>
+            <li><a href="#album">MY ALBUM</a></li>
+            <li><a href="#collabo">COLLABORATION</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
             </ul>
         </nav>
 
     </header>
     
     <div id="wrap">
-        <section id="home">메인이미지(대표이미지형식)
-            ex. 1.슬라이드 / 2.동영상 / 3.안내텍스트
+        <section id="home">
+            <!-- 메인이미지(대표이미지형식)
+            ex. 1.슬라이드 / 2.동영상 / 3.안내텍스트 -->
+            <article class="home1">
+                <div class="util">
+                    <a href="https://www.instagram.com/jeebanoff/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Logo Instagram</title><path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"/><path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"/></svg></a>
+                    <!-- <i class="fa fa-instagram" aria-hidden="true"></i> -->
+                    <a href="http://www.yes24.com/Product/Search?domain=MUSIC&query=%EC%A7%80%EB%B0%94%EB%85%B8%ED%94%84" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                        </svg>
+                    </a>
+                    <!-- <i class="fa fa-cart-plus" aria-hidden="true"></i> -->
+                </div>
+                <h1><a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/>
+                            <path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                        </svg>
+                        <h3>Jeebanoff</h3>
+                    </a>
+                </h1>
+                
+            </article>
+            <article class="home2">
+                <div>
+                    <div></div>
+                    <h4>KOREAN MUSIC AWARDS</h4>
+                    <h2>JEEBANOFF</h2>
+                    <h3>is
+                        a singer-songwriter in korea of top</h3>
+                </div>
+            </article>
+            <article class="home3">
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                <input type="button">
+            </article>
         </section>
-        <section id="pro">프로필
+        <section id="pro">WHO IS ME?
+            프로필
             1.필모그래피형식 (타임라인구조(타임라인인포그래픽검색) - 지도구조)
             2.수상내역또는 나열텍스트 - 너무 많은 인터렉션 하지 않기 주의
         </section>
-        <section id="gal">갤러리
+        <section id="album">MY ALBUM
             썸네일 클릭시 큰화면전환
             트레일러형식
         </section>
-        <section id="pa4">게시물구조 / 동영상재생방식 / 오락성있는</section>
-        <section id="pa5">게시물구조 / 동영상재생방식 / 오락성있는
+        <section id="collabo">COLLABORATION
+            게시물구조 / 동영상재생방식 / 오락성있는</section>
+        <section id="gallery">GALLERY
+            게시물구조 / 동영상재생방식 / 오락성있는
             위의 형식과 다른구조의 방식을 채택
         </section>
     </div>
